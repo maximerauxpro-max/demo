@@ -4,239 +4,143 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Marie-Eve Supplisson Immobilier · Côte d'Opale, Wimereux</title>
-<meta name="description" content="Marie-Eve Supplisson, agent immobilier à Wimereux : villas Belle Époque, maisons de pêcheurs, longères de l'arrière-pays boulonnais. Achat et vente sur la Côte d'Opale.">
+<title>Marie-Eve Supplisson Immobilier · Wimereux, Côte d'Opale</title>
+<meta name="description" content="Marie-Eve Supplisson, agent immobilier à Wimereux : villas Belle Époque, maisons et appartements vue mer, propriétés de l'arrière-pays boulonnais.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{--papier:#f7f2e8;--papier2:#efe6d4;--marine:#1d3557;--marine2:#14263f;--ocre:#d9a521;--encre:#22262e;--gris:#6b6e75}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--papier);color:var(--encre);font-family:Jost,system-ui,sans-serif;font-weight:400;line-height:1.65;overflow-x:clip;padding-bottom:64px}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
-.wrap{width:min(1140px,100% - 32px);margin-inline:auto}
-.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ocre);font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:15px 24px;transition:background .3s,color .3s}
-.btn-m{background:var(--marine);color:#fff}
-.btn-m:hover{background:var(--ocre);color:var(--marine2)}
-.btn-l{border:1px solid currentColor}
-.btn-l:hover{background:var(--marine);color:#fff}
-/* en-tête */
-header{position:sticky;top:0;z-index:20;background:rgba(247,242,232,.93);backdrop-filter:blur(8px);border-bottom:1px solid rgba(29,53,87,.12)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-.signature{text-decoration:none;line-height:1.05;color:var(--marine)}
-.signature b{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:22px}
-.signature small{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gris)}
-header .tel{font-size:13px;letter-spacing:.06em;text-decoration:none;color:var(--marine);border:1px solid var(--marine);padding:8px 12px}
-/* hero */
-.hero{position:relative;color:#fff;min-height:calc(100svh - 130px);display:grid;align-items:end;overflow:hidden;background:var(--marine2)}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:24% 50%;animation:lent 18s ease-out both}
-@keyframes lent{from{transform:scale(1.1)}to{transform:scale(1)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,38,63,.2),rgba(20,38,63,.35) 35%,rgba(20,38,63,.9) 90%)}
-.hero .wrap{position:relative;z-index:2;padding:0 0 44px}
-.hero h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(42px,11.5vw,92px);line-height:1;margin:14px 0 18px}
-.hero h1 em{color:#f3d27a}
-.hero p{max-width:560px;font-weight:300;font-size:17px;color:#eef0f4;margin-bottom:24px}
-.hero .btn-m{background:#fff;color:var(--marine)}
-.hero .btn-l{color:#fff}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-/* sélection */
-section{padding:84px 0}
-.titre{margin-bottom:34px}
-.titre h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(38px,10vw,66px);line-height:1;color:var(--marine);margin-top:10px}
-.titre h2 em{color:var(--ocre)}
-.vedette{display:grid;gap:0;background:#fff;box-shadow:0 30px 60px -30px rgba(20,38,63,.35)}
-.vedette figure{overflow:hidden}
-.vedette img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform 1.2s}
-.vedette:hover img{transform:scale(1.04)}
-.vedette .txt{padding:28px 24px 32px}
-.lieu{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris)}
-.vedette h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:32px;line-height:1.1;color:var(--marine);margin:8px 0 10px}
-.prix{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:30px;color:var(--marine)}
-.tag{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--ocre);color:#8a6610;margin-left:10px;vertical-align:middle}
-.biens{display:grid;gap:26px;margin-top:40px}
-.bien{background:#fff;text-decoration:none;display:block}
-.bien figure{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--marine)}
-.bien img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
-.bien:hover img{transform:scale(1.05)}
-.bien figure.dessin img{object-fit:contain;padding:24px}
-.bien figure .tag{position:absolute;left:12px;top:12px;background:var(--papier);margin:0;border:0;color:var(--marine)}
-.bien .txt{padding:18px 18px 22px}
-.bien h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:23px;line-height:1.15;color:var(--marine);margin:6px 0 4px}
-.bien p{color:var(--gris);font-size:15px;margin-bottom:10px}
-.bien .prix{font-size:24px}
-.tous{margin-top:36px;text-align:center}
-/* confiance */
-.confiance{background:var(--marine);color:#fff;text-align:center;position:relative;overflow:hidden}
-.confiance .wrap{max-width:820px}
-.confiance blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:clamp(28px,7.4vw,46px);line-height:1.2;margin:16px 0 22px}
-.confiance blockquote b{font-style:normal;color:#f3d27a;letter-spacing:.08em;font-weight:600}
-.confiance p{font-weight:300;color:#d5dbe5;max-width:600px;margin:0 auto 26px}
-.trio{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 26px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:#f3d27a}
-.confiance .bg{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);width:min(560px,120%);opacity:.18;mix-blend-mode:screen}
-/* vendre */
-.vendre .grille{display:grid;gap:34px;align-items:center}
-.vendre img{width:100%;box-shadow:18px 18px 0 var(--papier2)}
-.vendre h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(36px,9vw,58px);line-height:1.02;color:var(--marine);margin:10px 0 16px}
-.vendre p{margin-bottom:16px;color:#3d4250}
-.etapes{list-style:none;border-left:1px solid var(--ocre);margin:22px 0 28px;padding-left:20px;display:grid;gap:10px}
-.etapes li{font-family:"Cormorant Garamond",serif;font-size:21px;color:var(--marine)}
-/* côte */
-.cote{padding:0}
-.cote img{width:100%;height:220px;object-fit:cover}
-.cote .wrap{padding:44px 0 80px;text-align:center}
-.cote p{font-family:"Cormorant Garamond",serif;font-size:clamp(24px,6.4vw,36px);line-height:1.25;color:var(--marine);max-width:820px;margin:12px auto 0}
-/* à propos */
-.apropos{background:var(--papier2)}
-.apropos .grille{display:grid;gap:30px;align-items:center}
-.apropos figure img{max-width:340px;margin:0 auto;transform:rotate(-2deg);box-shadow:0 20px 40px -18px rgba(0,0,0,.35)}
-.apropos h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(34px,9vw,54px);line-height:1.05;color:var(--marine);margin:10px 0 14px}
-.apropos p{margin-bottom:14px;color:#3d4250}
-.apropos .devise{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:26px;color:var(--marine)}
-/* contact */
-.contact .grille{display:grid;gap:26px}
-.coord{display:grid;gap:0}
-.coord div{border-top:1px solid rgba(29,53,87,.18);padding:16px 0}
-.coord b{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gris);font-weight:500;margin-bottom:2px}
-.coord a,.coord span{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--marine);text-decoration:none;font-weight:600}
-footer{background:var(--marine2);color:#aab4c4;font-size:13px;padding:30px 0}
-footer .wrap{display:grid;gap:10px}
-footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
-footer a{color:#fff}
-.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;background:rgba(20,38,63,.96);color:#fff;font:400 12px/1.3 system-ui,sans-serif}
-.tempo a{background:#f3d27a;color:#14263f;text-decoration:none;border-radius:999px;padding:9px 13px;font-weight:600;white-space:nowrap;font-size:12px}
-.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
-.js .rv.in{opacity:1;transform:none}
-.js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}
-@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.hero>img{animation:none}}
-@media (min-width:760px){
-  .vedette{grid-template-columns:1.4fr 1fr;align-items:center}
-  .vedette img{aspect-ratio:auto;min-height:420px}
-  .vedette .txt{padding:40px}
-  .biens{grid-template-columns:repeat(3,1fr)}
-  .vendre .grille,.apropos .grille,.contact .grille{grid-template-columns:1fr 1fr;gap:70px}
-  .cote img{height:340px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="site.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <a class="signature" href="#"><b>Marie-Eve Supplisson</b><small>Immobilier · Côte d'Opale</small></a>
-    <a class="tel" href="tel:+33788708664">07 88 70 86 64</a>
+    <div class="barre">
+      <a class="logo" href="index.html"><span class="m">MS</span><span><b>Supplisson</b><small>Immobilier · Wimereux</small></span></a>
+      <a class="appel" href="tel:+33788708664">Appeler</a>
+    </div>
+    <nav class="menu" aria-label="Menu">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="biens.html">Nos biens</a>
+      <a href="vendre.html">Vendre</a>
+      <a href="vendre.html#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
-<section class="hero" style="padding:0">
-  <img src="img/facades-wimereux.jpg" alt="Villas Belle Époque de Wimereux" fetchpriority="high">
-  <div class="wrap">
-    <p class="eyebrow rv" style="color:#f3d27a">Le bonheur de vivre sur la Côte d'Opale</p>
-    <h1 class="rv d1">Trouvez votre <em>maison du bonheur</em>, entre digue et campagne</h1>
-    <p class="rv d2">Villas Belle Époque de Wimereux, maisons de pêcheurs d'Ambleteuse, longères de l'arrière-pays boulonnais. Je connais chaque rue, chaque vue, chaque histoire. Trouvons ensemble la vôtre.</p>
-    <div class="cta rv d2">
-      <a class="btn btn-m" href="#biens">Voir les biens</a>
-      <a class="btn btn-l" href="#vendre">Vous vendez ?</a>
-    </div>
-  </div>
-</section>
-
-<section id="biens">
-  <div class="wrap">
-    <div class="titre">
-      <p class="eyebrow rv">Sélection du moment</p>
-      <h2 class="rv">Mes biens <em>à vendre</em></h2>
-    </div>
-    <article class="vedette rv">
-      <figure><img src="img/villa-notre-dame-des-dunes.jpg" alt="Villa Notre Dame des Dunes, Wimereux"></figure>
-      <div class="txt">
-        <span class="lieu">Wimereux · Vue mer</span>
-        <h3>La Villa Notre Dame des Dunes</h3>
-        <p style="color:var(--gris);margin-bottom:14px">Une des plus belles villas de Wimereux, face à la mer.</p>
-        <span class="prix">1 280 000 €</span>
-      </div>
-    </article>
-    <div class="biens">
-      <a class="bien rv" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/villa-plage-wimereux.jpg" alt="Villa plage de Wimereux" loading="lazy"></figure><div class="txt"><span class="lieu">Wimereux</span><h3>Villa plage de Wimereux</h3><p>Villa typique wimereusienne avec garage et terrasse vue mer</p><span class="prix">875 500 €</span></div></a>
-      <a class="bien rv d1" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/propriete-samer.jpg" alt="Propriété de charme à la campagne, Samer" loading="lazy"></figure><div class="txt"><span class="lieu">Samer</span><h3>Propriété de charme à la campagne</h3><p>Magnifique maison avec nombreuses dépendances</p><span class="prix">695 000 €</span></div></a>
-      <a class="bien rv d2" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/maison-vue-mer-boulogne.jpg" alt="Grande maison vue mer, Boulogne-sur-Mer" loading="lazy"></figure><div class="txt"><span class="lieu">Boulogne-sur-Mer</span><h3>Grande maison vue mer</h3><p>Beaucoup de potentiel</p><span class="prix">659 000 €</span></div></a>
-      <a class="bien rv" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/propriete-vieille-ville.jpg" alt="Propriété de charme, Boulogne-sur-Mer vieille ville" loading="lazy"><span class="tag">Exclusivité</span></figure><div class="txt"><span class="lieu">Boulogne-sur-Mer · Vieille ville</span><h3>Propriété de charme dans le cœur historique</h3><p>Tout à pied, projets divers possibles</p><span class="prix">535 600 €</span></div></a>
-      <a class="bien rv d1" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/maison-plage-wimereux.jpg" alt="Maison proche plage, Wimereux" loading="lazy"></figure><div class="txt"><span class="lieu">Wimereux</span><h3>Maison proche plage</h3><p>Grand garage et grande terrasse</p><span class="prix">499 550 €</span></div></a>
-      <a class="bien rv d2" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure class="dessin"><img src="img/dessin-wimereux.jpg" alt="" loading="lazy"></figure><div class="txt"><span class="lieu">Cap Gris-Nez</span><h3>Appartement chaleureux vue mer</h3><p>Bâtisse en pierres</p><span class="prix">468 000 €</span></div></a>
-      <a class="bien rv" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/appartement-vue-mer.jpg" alt="Appartement vue mer, Wimereux centre plage" loading="lazy"></figure><div class="txt"><span class="lieu">Wimereux · Centre plage</span><h3>Appartement vue mer</h3><p>Garage et stationnement</p><span class="prix">457 600 €</span></div></a>
-      <a class="bien rv d1" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure class="dessin"><img src="img/dessin-wimereux.jpg" alt="" loading="lazy"></figure><div class="txt"><span class="lieu">Pittefaux</span><h3>Maison individuelle à la campagne, proche Wimereux</h3><p>Plain-pied</p><span class="prix">432 600 €</span></div></a>
-      <a class="bien rv d2" href="https://www.supplissonimmobilier.com/vendre-et-vendu" target="_blank" rel="noopener"><figure><img src="img/appartement-boulogne.jpg" alt="Grand appartement, résidence de style, Boulogne-sur-Mer centre" loading="lazy"><span class="tag">Exclusivité</span></figure><div class="txt"><span class="lieu">Boulogne-sur-Mer · Centre</span><h3>Grand appartement, résidence de style</h3><p>Impeccable</p><span class="prix">339 900 €</span></div></a>
-    </div>
-    <div class="tous rv"><a class="btn btn-l" style="color:var(--marine)" href="https://www.supplissonimmobilier.com/copy-of-vendre-et-vendu" target="_blank" rel="noopener">Voir ce que j'ai déjà vendu</a></div>
-  </div>
-</section>
-
-<section class="confiance">
-  <img class="bg" src="img/dessin-wimereux.jpg" alt="" aria-hidden="true">
-  <div class="wrap">
-    <p class="eyebrow rv">Ma façon de travailler</p>
-    <blockquote class="rv d1">La relation de <b>confiance</b> est la condition absolue de la réussite de votre projet, entre vous et moi.</blockquote>
-    <p class="rv d1">C'est pourquoi la plupart de mes clients me confient l'exclusivité du mandat de vente, et en sont très satisfaits.</p>
-    <div class="trio rv d2"><span>Discrétion</span><span>Efficacité</span><span>Sérénité</span></div>
-  </div>
-</section>
-
-<section class="vendre" id="vendre">
+<section class="hero">
   <div class="wrap grille">
-    <img class="rv" src="img/propriete-samer.jpg" alt="Propriété de charme à la campagne" loading="lazy">
     <div>
-      <p class="eyebrow rv">Propriétaires</p>
-      <h2 class="rv">Vous vendez ?<br>Parlons-en.</h2>
-      <p class="rv">Parce que le bonheur commence là où l'on vit, je vous accompagne dans votre projet de vente ou d'achat sur la Côte d'Opale, et même ailleurs.</p>
-      <ul class="etapes rv">
+      <span class="chip rv">Agent immobilier · Côte d'Opale</span>
+      <h1 class="rv d1">Le bonheur de vivre <span class="o">sur la Côte d'Opale</span></h1>
+      <p class="intro rv d2">Villas Belle Époque de Wimereux, appartements vue mer, longères de l'arrière-pays boulonnais : Marie-Eve Supplisson vous accompagne pour acheter ou vendre, de la première visite jusqu'au notaire.</p>
+      <div class="cta rv d2">
+        <a class="btn btn-v" href="biens.html">Voir les 10 biens <span class="fleche">→</span></a>
+        <a class="btn btn-l" href="vendre.html">Faire estimer mon bien</a>
+      </div>
+      <div class="raccourcis rv d1">
+        <a href="biens.html"><b>10</b>biens à vendre</a>
+        <a href="biens.html#wimereux"><b>4</b>à Wimereux</a>
+        <a href="vendre.html"><b>4</b>étapes pour vendre</a>
+      </div>
+    </div>
+    <div>
+      <figure class="arche rv">
+        <img src="img/hd/hero-villa-portrait.jpg" alt="Villa Notre-Dame des Dunes à Wimereux, façade Belle Époque jaune aux volets bleus" fetchpriority="high" width="1228" height="1536">
+        <figcaption class="legende"><span><b>Villa Notre-Dame des Dunes</b><span>Wimereux · vue mer · 150 m²</span></span><strong>1 280 000 €</strong></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section data-rail>
+  <div class="wrap">
+    <div class="car-tete">
+      <div class="titre" style="margin:0">
+        <span class="chip rv">Sélection du moment</span>
+        <h2 class="rv">Ils cherchent <span class="o">leur famille</span></h2>
+      </div>
+      <div class="fleches"><button type="button" data-dir="-1" aria-label="Biens précédents">←</button><button type="button" data-dir="1" aria-label="Biens suivants">→</button></div>
+    </div>
+    <div class="rail">
+      <a class="carte" href="biens.html#villa-plage"><figure><img src="img/hd/villa-plage-wimereux.jpg" alt="Terrasse vue mer de la villa plage de Wimereux" loading="lazy" draggable="false"></figure><div class="txt"><span class="lieu">Wimereux</span><h3>Villa plage de Wimereux</h3><span class="surf">167 m² · 5 chambres · terrasse vue mer</span><span class="prix">875 500 €</span></div></a>
+      <a class="carte" href="biens.html#samer"><figure><img src="img/hd/propriete-samer.jpg" alt="Propriété de charme à Samer" loading="lazy" draggable="false"></figure><div class="txt"><span class="lieu">Samer</span><h3>Propriété de charme à la campagne</h3><span class="surf">6 chambres · près de 3 hectares</span><span class="prix">695 000 €</span></div></a>
+      <a class="carte" href="biens.html#vue-mer-boulogne"><figure><img src="img/hd/maison-vue-mer-boulogne.jpg" alt="Grande maison vue mer à Boulogne-sur-Mer" loading="lazy" draggable="false"></figure><div class="txt"><span class="lieu">Boulogne-sur-Mer</span><h3>Grande maison vue mer</h3><span class="surf">227 m² · beaucoup de potentiel</span><span class="prix">659 000 €</span></div></a>
+      <a class="carte" href="biens.html#vieille-ville"><figure><img src="img/hd/propriete-vieille-ville.jpg" alt="Propriété de charme dans la vieille ville de Boulogne-sur-Mer" loading="lazy" draggable="false"><span class="badge">Exclusivité</span></figure><div class="txt"><span class="lieu">Boulogne · Vieille ville</span><h3>Propriété de charme, cœur historique</h3><span class="surf">330 m² · tout à pied</span><span class="prix">535 600 €</span></div></a>
+      <a class="carte" href="biens.html#proche-plage"><figure><img src="img/hd/maison-proche-plage-wimereux.jpg" alt="Séjour rénové de la maison proche plage à Wimereux" loading="lazy" draggable="false"></figure><div class="txt"><span class="lieu">Wimereux</span><h3>Maison proche plage</h3><span class="surf">102 m² · rénovée · grand garage</span><span class="prix">499 550 €</span></div></a>
+      <a class="carte" href="biens.html#cap-gris-nez"><figure><img src="img/hd/appartement-cap-gris-nez.jpg" alt="Séjour sous poutres de l'appartement du Cap Gris-Nez" loading="lazy" draggable="false"></figure><div class="txt"><span class="lieu">Cap Gris-Nez</span><h3>Appartement chaleureux vue mer</h3><span class="surf">93 m² · bâtisse en pierres</span><span class="prix">468 000 €</span></div></a>
+    </div>
+    <p style="margin-top:22px" class="rv"><a class="btn btn-l" href="biens.html">Tous les biens <span class="fleche">→</span></a></p>
+  </div>
+</section>
+
+<section class="communes">
+  <div class="wrap grille">
+    <div>
+      <div class="titre">
+        <span class="chip rv">Entre digue et campagne</span>
+        <h2 class="rv">Là où sont nos biens</h2>
+      </div>
+      <ul class="liste-communes">
+        <li class="rv"><b>Wimereux</b><span>4 biens</span></li>
+        <li class="rv"><b>Boulogne-sur-Mer</b><span>3 biens</span></li>
+        <li class="rv"><b>Cap Gris-Nez</b><span>1 bien</span></li>
+        <li class="rv"><b>Pittefaux</b><span>1 bien</span></li>
+        <li class="rv"><b>Samer</b><span>1 bien</span></li>
+      </ul>
+    </div>
+    <div>
+      <figure class="panorama rv"><img src="img/hd/facades-wimereux.jpg" alt="Les villas colorées de Wimereux" loading="lazy"></figure>
+      <p class="credit rv">Les villas de Wimereux, photo de l'agence.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="vendre-bloc rv">
+      <span class="chip">Propriétaires</span>
+      <h2>Vous vendez ? Parlons-en.</h2>
+      <p>Parce que le bonheur commence là où l'on vit, Marie-Eve vous accompagne dans votre projet de vente sur la Côte d'Opale, et même ailleurs.</p>
+      <ol class="etapes-n">
         <li>L'estimation</li>
         <li>Les visites</li>
         <li>Des conseils de professionnels</li>
         <li>Jusqu'à la signature chez le notaire</li>
-      </ul>
-      <div class="cta rv">
-        <a class="btn btn-m" href="tel:+33788708664">Appelez-moi</a>
-        <a class="btn btn-l" style="color:var(--marine)" href="mailto:marieevesupplisson@gmail.com">M'écrire</a>
-      </div>
+      </ol>
+      <a class="btn btn-v" href="vendre.html">Demander une estimation <span class="fleche">→</span></a>
     </div>
   </div>
 </section>
 
-<section class="cote">
-  <img class="rv" src="img/digue.jpg" alt="La digue de Wimereux et la mer" loading="lazy">
-  <div class="wrap">
-    <p class="eyebrow rv">La Côte d'Opale</p>
-    <p class="rv d1">Wimereux, Ambleteuse, le Cap Gris-Nez, Boulogne-sur-Mer et l'arrière-pays boulonnais : entre digue et campagne.</p>
-  </div>
-</section>
-
-<section class="apropos" id="apropos">
+<section class="apropos" style="padding-top:20px">
   <div class="wrap grille">
-    <figure class="rv"><img src="img/aquarelle-villa.jpg" alt="Aquarelle d'une villa de Wimereux" loading="lazy"></figure>
+    <figure class="aquarelle rv"><img src="img/hd/aquarelle-villa.jpg" alt="Aquarelle d'une villa de Wimereux" loading="lazy" width="365" height="521"></figure>
     <div>
-      <p class="eyebrow rv">À propos</p>
-      <h2 class="rv">Avec vous<br>jusqu'au bout</h2>
-      <p class="rv">Originaire de la Côte d'Opale, juriste passionnée, titulaire d'un Bac +6 en droit à Lille et à Paris, j'ai exercé comme enseignante avant de revenir à ma première passion.</p>
-      <p class="rv">Entre mes investissements immobiliers personnels et mon implication dans le développement immobilier sur la Côte d'Opale avec mon mari, j'aime aider les gens dans leurs projets de vie.</p>
+      <span class="chip rv">Qui est Marie-Eve ?</span>
+      <h2 class="rv">Avec vous, jusqu'au bout</h2>
+      <p class="rv">Originaire de la Côte d'Opale, juriste passionnée, titulaire d'un Bac +6 en droit à Lille et à Paris, elle a exercé comme enseignante avant de revenir à sa première passion : l'immobilier.</p>
+      <p class="rv">Entre ses investissements personnels et son implication dans le développement immobilier de la Côte d'Opale, elle aime aider chacun dans son projet de vie. La plupart de ses clients lui confient l'exclusivité du mandat de vente.</p>
+      <div class="valeurs rv"><span>Discrétion</span><span>Efficacité</span><span>Sérénité</span></div>
       <p class="devise rv">« Être heureux là où l'on vit est le début du bonheur ! »</p>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact-court">
   <div class="wrap grille">
-    <div class="titre" style="margin:0">
-      <p class="eyebrow rv">Contact</p>
-      <h2 class="rv">Parlons de<br><em>votre projet</em></h2>
-      <p class="rv" style="margin-top:14px;color:var(--gris)">Écrivez-moi, ou rencontrons-nous.</p>
+    <div class="titre">
+      <span class="chip rv">Contact</span>
+      <h2 class="rv">Parlons de votre projet</h2>
     </div>
-    <div class="coord">
-      <div class="rv"><b>Agence</b><span>17 rue Notre-Dame, Wimereux</span></div>
-      <div class="rv"><b>Téléphone</b><a href="tel:+33788708664">07 88 70 86 64</a></div>
-      <div class="rv"><b>E-mail</b><a href="mailto:marieevesupplisson@gmail.com" style="font-size:20px;word-break:break-word">marieevesupplisson@gmail.com</a></div>
-      <div class="rv"><b>Horaires</b><span>8 h – 18 h, du lundi au samedi</span></div>
+    <div>
+      <div class="coord">
+        <a class="rv" href="tel:+33788708664"><small>Téléphone</small><b>07 88 70 86 64</b></a>
+        <a class="rv" href="mailto:marieevesupplisson@gmail.com"><small>E-mail</small><b>marieevesupplisson@gmail.com</b></a>
+        <div class="rv"><small>Agence</small><b>17 rue Notre-Dame, Wimereux</b></div>
+        <div class="rv"><small>Horaires</small><b>8 h – 18 h, lundi au samedi</b></div>
+      </div>
+      <a class="btn btn-o rv" href="vendre.html#contact">Écrire à Marie-Eve <span class="fleche">→</span></a>
     </div>
   </div>
 </section>
@@ -244,23 +148,19 @@ footer a{color:#fff}
 <footer>
   <div class="wrap">
     <nav>
+      <a href="index.html">Accueil</a><a href="biens.html">Nos biens</a><a href="vendre.html">Vendre</a>
       <a href="https://www.instagram.com/marieevesupplisson/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/profile.php?id=100085948898450" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.linkedin.com/in/marie-eve-supplisson-20164b244/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.supplissonimmobilier.com/blank-5" target="_blank" rel="noopener">Honoraires</a>
-      <a href="https://www.supplissonimmobilier.com/blank-2" target="_blank" rel="noopener">Mentions légales</a>
     </nav>
-    <span>Marie-Eve Supplisson · Agent immobilier · CPI 6203 2026 000 000 003 · CCI Littoral Hauts-de-France</span>
+    <span>Marie-Eve Supplisson · Agent immobilier · CPI 6203 2026 000 000 003 · CCI Littoral Hauts-de-France · Honoraires libres (art. L 444-1 al. 3 du Code de commerce)</span>
     <span>Site réalisé par <a href="https://www.tempoagency.fr" target="_blank" rel="noopener">TEMPO</a></span>
   </div>
 </footer>
 
 <div class="tempo"><span>Maquette proposée par TEMPO</span><a href="https://www.tempoagency.fr/demo" target="_blank" rel="noopener">Ce site vous plaît ? Parlons-en</a></div>
 
-<script>
-(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
-</script>
+<script src="site.js"></script>
 <script src="../assets/suivi.js" defer></script>
 </body>
 </html>
