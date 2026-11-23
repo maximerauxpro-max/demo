@@ -2,7 +2,7 @@
    Exclus : robots / aperçus de liens, et les appareils marqués « moi » (page moi.html). */
 (function(){
   var U="https://mtzccxepxxmyzzhljewe.supabase.co/rest/v1/demo_vues", K="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10emNjeGVweHhteXp6aGxqZXdlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNzI3OTAsImV4cCI6MjA4NTk0ODc5MH0.aVKgWv2Im0xOoCNhfGVQ160e4nWvnHOt_uGOUIuGPLY";
-  var slug=(location.pathname.split("/").filter(Boolean).slice(-1)[0]||"").slice(0,80);
+  var seg=location.pathname.split("/").filter(Boolean), last=seg[seg.length-1]||""; if(/\.html?$/.test(last)){ seg.pop(); last=last.replace(/\.html?$/,""); } else last="index"; var slug=((seg[seg.length-1]||"")+(last!=="index"?"/"+last:"")).slice(0,80); /* 23/11 : « demo/page » pour les sous-pages (avant : « carte.html » mélangeait les démos) */
   var ua=navigator.userAgent||"";
   try{ if(localStorage.getItem("tempo_moi")==="1") return; }catch(e){}
   if(/bot|crawl|spider|facebookexternalhit|facebot|whatsapp|telegram|preview|slurp|headless|lighthouse/i.test(ua)) return;
