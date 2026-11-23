@@ -9,136 +9,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--asphalte:#1f1f23;--carbone:#2c2c31;--gris:#8d8d94;--argent:#d9d9de;--rouge:#d7262f;--rouge-f:#a8141c;--blanc:#f7f7f8}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Barlow,system-ui,sans-serif;background:var(--asphalte);color:var(--blanc);line-height:1.55;overflow-x:hidden;padding-bottom:64px}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit}
-.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.02em}
-.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
-
-/* en-tête */
-.top{position:absolute;inset:0 0 auto;z-index:5;padding:18px 0}
-.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.top img{height:34px;width:auto}
-.top a.tel{font-family:"Barlow Condensed";font-weight:800;font-size:15px;text-decoration:none;background:var(--rouge);padding:8px 14px;border-radius:4px;white-space:nowrap;transform:skewX(-8deg)}
-.top a.tel span{display:inline-block;transform:skewX(8deg)}
-
-/* héros */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 50%;z-index:-2;transform:scale(1.08);animation:zoom 9s ease-out forwards}
-@keyframes zoom{to{transform:scale(1)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,20,24,.55) 0%,rgba(20,20,24,.15) 30%,rgba(20,20,24,.92) 72%,var(--asphalte) 100%)}
-.hero .wrap{padding:0 0 56px}
-.hero .logo{width:min(560px,88%);filter:drop-shadow(0 4px 18px rgba(0,0,0,.5))}
-.hero .kicker{display:inline-block;margin:22px 0 10px;font-family:"Barlow Condensed";font-weight:700;font-style:italic;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--argent)}
-.hero .kicker b{color:var(--rouge)}
-.hero p.lead{max-width:520px;font-size:17px;color:#e6e6ea}
-.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.btn{display:inline-flex;align-items:center;gap:10px;font-family:"Barlow Condensed";font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:14px 22px;border-radius:4px;transform:skewX(-8deg);transition:transform .2s,background .2s}
-.btn>span{display:inline-block;transform:skewX(8deg)}
-.btn.r{background:var(--rouge);color:#fff;box-shadow:0 10px 30px -10px rgba(215,38,47,.7)}
-.btn.r:hover{background:var(--rouge-f)}
-.btn.g{border:2px solid rgba(255,255,255,.35);color:#fff}
-.btn:active{transform:skewX(-8deg) scale(.97)}
-
-/* bande damier */
-.damier{height:18px;background:conic-gradient(#fff 25%,#111 0 50%,#fff 0 75%,#111 0) 0 0/18px 18px;opacity:.9}
-
-/* sections */
-section{padding:84px 0;position:relative}
-.titre{font-family:"Barlow Condensed";font-weight:800;font-style:italic;text-transform:uppercase;font-size:clamp(38px,9vw,68px);line-height:.95;letter-spacing:.01em}
-.titre em{color:var(--rouge);font-style:italic}
-.sous{color:var(--gris);font-weight:600;font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.18em;font-size:14px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.sous::before{content:"";width:28px;height:3px;background:var(--rouge)}
-
-/* formations : boîte de vitesses */
-.grille{display:grid;gap:14px;margin-top:38px}
-@media(min-width:760px){.grille{grid-template-columns:repeat(2,1fr)}}
-.carte{position:relative;background:linear-gradient(145deg,var(--carbone),#232327);border:1px solid #38383e;border-radius:10px;padding:26px 22px 24px 86px;overflow:hidden}
-.carte .n{position:absolute;left:20px;top:22px;width:46px;height:46px;border-radius:50%;border:3px solid var(--argent);display:grid;place-items:center;font-family:"Barlow Condensed";font-weight:800;font-size:22px;color:#fff;background:#18181b}
-.carte h3{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;font-size:24px;letter-spacing:.02em;line-height:1.1}
-.carte p{color:#bdbdc4;margin-top:6px;font-size:15.5px}
-.carte::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;border:14px solid rgba(215,38,47,.12)}
-
-/* code */
-.code{background:var(--blanc);color:var(--asphalte)}
-.code .sous{color:#6b6b72}
-.compteur{margin-top:34px;display:grid;gap:18px;align-items:center}
-@media(min-width:760px){.compteur{grid-template-columns:auto 1fr;gap:48px}}
-.cadran{width:230px;height:230px;border-radius:50%;margin-inline:auto;position:relative;background:radial-gradient(circle at 50% 50%,#2a2a2f 0 54%,transparent 55%),conic-gradient(from 225deg,var(--rouge) 0 calc(var(--p,0)*1%),#d4d4da 0 75%,transparent 0);transition:--p 1.6s}
-.cadran .h{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff}
-.cadran .h b{font-family:"Barlow Condensed";font-weight:800;font-size:58px;line-height:1;display:block}
-.cadran .h small{font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:#bdbdc4}
-.jours{display:flex;gap:6px;flex-wrap:wrap;margin-top:18px}
-.jours span{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;font-size:15px;padding:7px 9px;border-radius:4px;background:#ececef;color:#9a9aa1}
-.jours span.on{background:var(--asphalte);color:#fff;box-shadow:inset 0 -3px 0 var(--rouge)}
-.code p.t{font-size:17px;max-width:520px}
-
-/* route */
-.route{background:#18181b;overflow:hidden}
-.photo{position:relative;border-radius:12px;overflow:hidden;margin-top:34px}
-.photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.photo figcaption{position:absolute;left:0;bottom:0;right:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:14px}
-.ligne{position:absolute;right:8px;top:0;bottom:0;width:6px;background:repeating-linear-gradient(180deg,rgba(255,255,255,.07) 0 34px,transparent 34px 60px);pointer-events:none}
-.duo{display:grid;gap:26px;align-items:center;position:relative}
-@media(min-width:860px){.duo{grid-template-columns:1fr 1fr;gap:56px}.duo .photo{margin-top:0}}
-
-/* bon à savoir */
-.regles{display:grid;gap:12px;margin-top:30px;counter-reset:r}
-.regle{display:flex;gap:16px;align-items:flex-start;padding:18px;border-radius:10px;background:var(--carbone);border-left:4px solid var(--rouge)}
-.regle .ic{flex:0 0 40px;height:40px;border-radius:8px;background:#38383e;display:grid;place-items:center}
-.regle .ic svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.regle h3{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;font-size:20px;line-height:1.15}
-.regle p{color:#bdbdc4;font-size:15px;margin-top:3px}
-
-/* contact */
-.contact{background:linear-gradient(160deg,var(--rouge) 0%,var(--rouge-f) 100%);overflow:hidden}
-.contact::before{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;border:40px solid rgba(255,255,255,.08)}
-.contact .titre em{color:#1f1f23}
-.infos{display:grid;gap:12px;margin-top:30px}
-@media(min-width:760px){.infos{grid-template-columns:repeat(3,1fr)}}
-.info{background:rgba(0,0,0,.18);border-radius:10px;padding:18px;text-decoration:none;display:block;transition:background .2s}
-a.info:hover{background:rgba(0,0,0,.3)}
-.info small{display:block;font-family:"Barlow Condensed";text-transform:uppercase;letter-spacing:.16em;font-size:13px;opacity:.8}
-.info b{display:block;font-size:18px;margin-top:4px;word-break:break-word}
-footer{background:#111114;color:#8d8d94;padding:34px 0 94px;margin-bottom:-64px;font-size:14px;text-align:center}
-footer img{height:30px;width:auto;margin:0 auto 12px;opacity:.9}
-footer a{color:#c9c9ce}
-
-/* révélation au défilement */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
-.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
-.rv.in{opacity:1;transform:none}
-.cadran.in{--p:42}
-@property --p{syntax:"<number>";inherits:false;initial-value:0}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero>img{animation:none;transform:none}}
-
-/* bandeau TEMPO */
-.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,17,20,.94);backdrop-filter:blur(8px);border-top:1px solid #2e2e33;font-size:12.5px;color:#a9a9b0}
-.tempo a{flex:0 0 auto;background:#fff;color:#111;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:999px;font-size:12.5px}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <img src="img/logo-blanc.png" alt="Thib'Auto École" width="900" height="152">
+    <a class="marque" href="index.html"><img src="img/logo-blanc.png" alt="Thib'Auto École" width="900" height="152"></a>
     <a class="tel" href="tel:+33666982676"><span>06 66 98 26 76</span></a>
+    <nav class="menu" aria-label="Menu principal"><a href="index.html" aria-current="page">Accueil</a><a href="formations.html">Formations</a><a href="infos.html">Infos &amp; contact</a></nav>
   </div>
 </header>
 
 <section class="hero">
-  <img src="img/vitrine-bas.jpg" alt="La vitrine de Thib’Auto École, 96 rue de Rosamel à Étaples" width="1400" height="1025">
+  <img class="volant" src="img/hero-examen.jpg" alt="Un moniteur montre le parcours à un élève, voiture et plots sur le plateau" width="1800" height="1200" fetchpriority="high">
+  <span class="illu">Photo d'illustration</span>
   <div class="wrap">
     <img class="logo rv" src="img/logo-blanc.png" alt="" width="900" height="152">
     <div class="kicker rv d1">Auto-école · <b>Étaples</b> · 96 rue de Rosamel</div>
     <p class="lead rv d2">Enseignement de la conduite automobile et de la sécurité routière. Permis B et conduite accompagnée, sur boîte manuelle ou automatique.</p>
     <div class="btns rv d3">
       <a class="btn r" href="tel:+33666982676"><span>Appeler l'auto-école</span></a>
-      <a class="btn g" href="#formations"><span>Les formations</span></a>
+      <a class="btn g" href="formations.html"><span>Les formations</span></a>
     </div>
   </div>
 </section>
@@ -154,6 +46,7 @@ footer a{color:#c9c9ce}
       <article class="carte rv d2"><div class="n">3</div><h3>Boîte manuelle ou automatique</h3><p>Les deux formations sont proposées : vous choisissez celle qui vous convient.</p></article>
       <article class="carte rv d3"><div class="n">4</div><h3>Formation continue</h3><p>Du perfectionnement pour reprendre confiance au volant, permis en poche.</p></article>
     </div>
+    <div class="btns rv"><a class="btn r" href="formations.html"><span>Le détail des formations</span></a></div>
   </div>
 </section>
 
@@ -204,6 +97,7 @@ footer a{color:#c9c9ce}
       <a class="info rv d1" href="tel:+33666982676"><small>Téléphone</small><b>06 66 98 26 76</b></a>
       <a class="info rv d2" href="mailto:thibautoecole@outlook.fr"><small>E-mail</small><b>thibautoecole@outlook.fr</b></a>
     </div>
+    <div class="btns rv"><a class="btn b" href="infos.html"><span>Infos pratiques</span></a></div>
   </div>
 </section>
 

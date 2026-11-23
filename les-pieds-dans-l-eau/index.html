@@ -9,96 +9,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Parisienne&family=Jost:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--marine:#2d313a;--nuit:#1f232b;--creme:#f5efe4;--sable:#ebe2d1;--or:#b08d4e;--olive:#7d7c55;--brun:#5b4632;--texte:#3a3630}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Jost,system-ui,sans-serif;background:var(--creme);color:var(--texte);line-height:1.65;overflow-x:hidden;padding-bottom:62px}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit}
-.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
-.serif{font-family:"Cormorant Garamond",Georgia,serif}
-.script{font-family:Parisienne,cursive;font-weight:400}
-
-/* héros */
-.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--creme);isolation:isolate;overflow:hidden;padding:90px 20px 120px}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:respire 14s ease-in-out infinite alternate}
-@keyframes respire{from{transform:scale(1.02)}to{transform:scale(1.1)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 40%,rgba(31,35,43,.45),rgba(31,35,43,.88) 75%)}
-.hero .logo{width:132px;height:132px;margin:0 auto 26px;border-radius:50%;border:3px solid #f5efe4;box-shadow:0 12px 40px rgba(0,0,0,.45)}
-.hero .pre{font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:#d9c7a3}
-.hero h1{font-family:Parisienne,cursive;font-weight:400;font-size:clamp(56px,16vw,120px);line-height:1.05;margin:8px 0 6px;text-shadow:0 4px 30px rgba(0,0,0,.35)}
-.hero .rb{font-family:"Cormorant Garamond";font-size:20px;letter-spacing:.3em;text-transform:uppercase}
-.hero .rb::before,.hero .rb::after{content:"";display:inline-block;width:34px;height:1px;background:var(--or);vertical-align:middle;margin:0 14px}
-.hero .lieu{margin-top:22px;font-size:16px;color:#e9e1d1}
-.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:14px 28px;border:1px solid var(--or);border-radius:999px;text-decoration:none;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--creme);background:rgba(176,141,78,.18);transition:background .3s}
-.cta:hover{background:var(--or)}
-.vague{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;color:var(--creme)}
-.vague path{fill:currentColor}
-
-/* intro */
-.intro{padding:70px 0 40px;text-align:center}
-.intro .feuille{width:58px;margin:0 auto 18px;color:var(--olive)}
-.intro p.big{font-family:"Cormorant Garamond";font-size:clamp(25px,6vw,36px);line-height:1.35;color:var(--marine);max-width:760px;margin:0 auto}
-.intro p.big em{color:var(--or)}
-
-/* duo */
-.duo{display:grid;gap:30px;align-items:center;padding:40px 0 70px}
-@media(min-width:840px){.duo{grid-template-columns:1.05fr 1fr;gap:64px}.duo.inv .img{order:2}}
-.img{position:relative}
-.img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:88% 50%;border-radius:220px 220px 6px 6px}
-.img::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--or);border-radius:220px 220px 6px 6px;z-index:-1}
-.eti{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--or)}
-h2{font-family:"Cormorant Garamond";font-weight:500;font-size:clamp(36px,8.5vw,56px);line-height:1.08;color:var(--marine);margin:10px 0 16px}
-h2 .script{color:var(--or);font-size:1.15em}
-.duo p{font-size:16.5px;max-width:460px}
-
-/* bandeau marine */
-.marine{background:var(--marine);color:var(--creme);padding:80px 0;position:relative;overflow:hidden}
-.marine::before{content:"";position:absolute;inset:auto -10% -60px -10%;height:160px;background:radial-gradient(ellipse at center,rgba(176,141,78,.22),transparent 70%)}
-.marine h2{color:var(--creme);text-align:center}
-.marine .eti{text-align:center;display:block}
-.cartes{display:grid;gap:16px;margin-top:38px}
-@media(min-width:760px){.cartes{grid-template-columns:repeat(3,1fr)}}
-.c{border:1px solid rgba(176,141,78,.45);border-radius:6px;padding:28px 22px;text-align:center;background:rgba(255,255,255,.03)}
-.c svg{width:34px;height:34px;stroke:var(--or);fill:none;stroke-width:1.4;margin:0 auto 12px}
-.c h3{font-family:"Cormorant Garamond";font-weight:600;font-size:25px;line-height:1.2}
-.c p{color:#c9c2b4;font-size:15px;margin-top:6px}
-
-/* assiette */
-.assiette{padding:80px 0;text-align:center}
-.assiette .rond{width:min(420px,84vw);aspect-ratio:1;margin:30px auto 0;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -25px rgba(45,49,58,.55);outline:1px solid var(--or);outline-offset:12px}
-.assiette .rond img{width:100%;height:100%;object-fit:cover;transform:scale(1.35);transform-origin:50% 48%}
-.assiette p{max-width:520px;margin:34px auto 0;font-size:16.5px}
-
-/* contact */
-.contact{background:var(--sable);padding:80px 0;text-align:center}
-.contact .tel{display:block;font-family:"Cormorant Garamond";font-size:clamp(40px,11vw,64px);color:var(--marine);text-decoration:none;margin:8px 0 4px;letter-spacing:.02em}
-.contact .tel:hover{color:var(--or)}
-.ferme{display:inline-block;margin-top:14px;padding:8px 18px;border-radius:999px;background:var(--creme);font-size:14.5px;color:var(--brun)}
-.liens{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
-.liens a{padding:11px 20px;border-radius:999px;border:1px solid var(--marine);text-decoration:none;font-size:14px;letter-spacing:.08em;transition:background .3s,color .3s}
-.liens a:hover{background:var(--marine);color:var(--creme)}
-footer{background:var(--nuit);color:#9b978d;text-align:center;padding:40px 20px 96px;margin-bottom:-62px;font-size:14px}
-footer img{width:64px;height:64px;border-radius:50%;border:2px solid #f5efe4;margin:0 auto 12px}
-footer a{color:#d9c7a3}
-
-/* révélations */
-.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
-.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
-.rv.in{opacity:1;transform:none}
-.trait{stroke-dasharray:240;stroke-dashoffset:240;transition:stroke-dashoffset 1.8s ease}
-.in .trait{stroke-dashoffset:0}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero>img{animation:none}.trait{stroke-dashoffset:0}}
-
-.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(245,239,228,.95);backdrop-filter:blur(8px);border-top:1px solid #ddd2bd;font-size:12.5px;color:#6d6658}
-.tempo a{flex:0 0 auto;background:var(--marine);color:#fff;text-decoration:none;font-weight:500;padding:8px 12px;border-radius:999px;font-size:12.5px}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header class="nav">
+  <div class="wrap">
+    <a class="lien-acc" href="index.html">Les pieds dans l'eau</a>
+    <a class="tel-n" href="tel:+33321840797">03 21 84 07 97</a>
+    <nav class="menu" aria-label="Menu principal"><a href="index.html" aria-current="page">Accueil</a><a href="carte.html">La carte</a><a href="infos.html">Infos pratiques</a></nav>
+  </div>
+</header>
+
 <section class="hero">
   <img src="img/salle.jpg" alt="La salle du restaurant Les pieds dans l'eau" width="1400" height="933">
+  <figure class="cadre rv"><img src="img/salle.jpg" alt="" width="1400" height="933" fetchpriority="high"></figure>
   <div>
     <img class="logo rv" src="img/logo.png" alt="Logo Les pieds dans l'eau" width="400" height="400">
     <div class="pre rv d1">Sainte-Cécile · Camiers</div>
@@ -135,6 +60,7 @@ footer a{color:#d9c7a3}
       <div class="c rv d1"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Jours de fermeture</h3><p>Fermé le mardi soir et le mercredi.</p></div>
       <div class="c rv d2"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><h3>Réservation</h3><p>Par téléphone au 03 21 84 07 97.</p></div>
     </div>
+    <div style="text-align:center"><a class="cta rv" href="infos.html">Toutes les infos pratiques</a></div>
   </div>
 </section>
 
@@ -144,6 +70,7 @@ footer a{color:#d9c7a3}
     <h2 class="rv d1">Cuisine <span class="script">française</span></h2>
     <div class="rond rv d2"><img src="img/plat.jpg" alt="Une assiette du restaurant Les pieds dans l'eau" width="1050" height="1400" loading="lazy"></div>
     <p class="rv">Le restaurant français de Sainte-Cécile, en salle ou en terrasse, à deux pas du sable.</p>
+    <a class="cta rv" href="carte.html" style="color:var(--marine)">Découvrir la carte</a>
   </div>
 </section>
 
