@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kdo Chrono · Personnalisation express à Cucq</title>
+<meta name="description" content="Kdo Chrono, personnalisation express à Cucq : t-shirts, sweats, casquettes, bonnets, mugs, porte-clés, stylos. Cadeaux sur mesure pour particuliers et professionnels.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#2f9e44;--vert-f:#1f6f2f;--bleu:#1c7ed6;--rose:#e64980;--jaune:#fcc419;--orange:#fd7e14;--fond:#fbfaf6;--encre:#1d2a22}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html{overflow-x:clip}
+body{background:var(--fond);color:var(--encre);font-family:Nunito,system-ui,sans-serif;line-height:1.6;overflow-x:clip;padding-bottom:64px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Fredoka,system-ui,sans-serif;line-height:1.05;letter-spacing:-.01em}
+.wrap{width:min(1100px,100% - 32px);margin-inline:auto}
+/* taches de peinture */
+.taches{position:relative;isolation:isolate}
+.taches::before,.taches::after{content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);opacity:.55}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 16px Fredoka,sans-serif;text-decoration:none;border-radius:999px;padding:13px 22px;transition:transform .2s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+.btn-v{background:var(--vert);color:#fff;box-shadow:0 6px 0 var(--vert-f)}
+.btn-b{background:#fff;color:var(--encre);border:2.5px solid var(--encre)}
+/* en-tête */
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,246,.9);backdrop-filter:blur(10px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marque img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 38%;border:2px solid var(--vert)}
+.marque span{font:700 20px Fredoka,sans-serif;color:var(--vert-f)}
+header .btn{padding:9px 16px;font-size:14px;box-shadow:0 4px 0 var(--vert-f)}
+/* hero */
+.hero{padding:26px 0 60px}
+.hero.taches::before{width:260px;height:260px;background:radial-gradient(circle,var(--rose),transparent 65%);top:-40px;right:-90px}
+.hero.taches::after{width:280px;height:280px;background:radial-gradient(circle,var(--jaune),transparent 65%);bottom:0;left:-120px}
+.badge{display:inline-block;background:var(--encre);color:#fff;font:600 13px Fredoka,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(46px,13vw,96px);margin:18px 0 14px;color:var(--encre)}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--vert),var(--bleu) 55%,var(--rose));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:18px;max-width:520px;margin-bottom:24px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.visuel{position:relative;max-width:470px}
+.visuel img{border-radius:28px;transform:rotate(2deg);box-shadow:0 22px 50px rgba(29,42,34,.22)}
+.sticker{position:absolute;left:-6px;top:-12px;background:var(--jaune);font:700 15px Fredoka,sans-serif;padding:10px 16px;border-radius:14px;transform:rotate(-6deg);box-shadow:0 6px 0 #d9a40c}
+/* défilé de produits */
+.defile-box{overflow:hidden;padding:16px 0}
+.defile{background:var(--encre);color:#fff;overflow:hidden;padding:14px 0;transform:rotate(-1.5deg);width:110%;margin-left:-5%}
+.defile div{display:flex;gap:34px;width:max-content;animation:defile 26s linear infinite;font:600 20px Fredoka,sans-serif}
+.defile span::after{content:"✦";margin-left:34px;color:var(--jaune)}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{padding:72px 0}
+.sur{font:600 14px Fredoka,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--rose);margin-bottom:10px}
+h2{font-size:clamp(34px,9vw,58px);margin-bottom:26px}
+/* produits */
+.produits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.produit{background:#fff;border-radius:22px;padding:20px 16px;border:2px solid #ece9df;transition:transform .25s}
+.produit:nth-child(odd){transform:rotate(-1deg)}.produit:nth-child(even){transform:rotate(1deg)}
+.produit .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:12px}
+.produit h3{font-size:19px;margin-bottom:4px}
+.produit p{font-size:14px;color:#55625a}
+/* pour qui */
+.pourqui{display:grid;gap:16px}
+.bloc{border-radius:26px;padding:30px 24px;color:#fff;position:relative;overflow:hidden}
+.bloc h3{font-size:28px;margin-bottom:10px}
+.bloc ul{list-style:none;display:grid;gap:6px;font-weight:600}
+.bloc li::before{content:"● ";opacity:.6}
+.bloc::after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-50px;bottom:-60px;background:rgba(255,255,255,.14)}
+/* noël */
+.noel{background:#fff}
+.noel .grille{display:grid;gap:26px;align-items:center}
+.noel img{border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,.12)}
+.noel p{font-size:17px;margin-bottom:14px}
+/* étapes */
+.etapes{display:grid;gap:14px;counter-reset:e}
+.etape{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:20px;padding:20px;border:2px dashed #d7e9da}
+.etape::before{counter-increment:e;content:counter(e);flex:none;width:42px;height:42px;border-radius:50%;background:var(--vert);color:#fff;font:700 20px Fredoka,sans-serif;display:grid;place-items:center}
+.etape h3{font-size:20px;margin-bottom:2px}
+/* contact */
+.contact{background:var(--vert);color:#fff;border-radius:34px 34px 0 0}
+.contact.taches::before{width:240px;height:240px;background:radial-gradient(circle,var(--jaune),transparent 65%);top:-60px;right:-60px;opacity:.5}
+.contact h2{color:#fff}
+.lignes{display:grid;gap:12px;margin:8px 0 28px}
+.lignes a,.lignes span{display:flex;justify-content:space-between;gap:10px;background:rgba(255,255,255,.12);border-radius:16px;padding:16px 18px;text-decoration:none;font-weight:800;font-size:17px}
+.lignes small{font-weight:600;opacity:.8;font-size:13px}
+.contact .btn-b{border-color:#fff;background:transparent;color:#fff}
+.contact .btn-v{background:#fff;color:var(--vert-f);box-shadow:0 6px 0 rgba(0,0,0,.18)}
+footer{background:var(--vert-f);color:#d6eedb;font-size:13px;padding:22px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+footer a{color:#fff}
+.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 12px;background:rgba(29,42,34,.95);color:#fff;font:500 12px/1.3 system-ui,sans-serif}
+.tempo a{background:#fff;color:#111;text-decoration:none;border-radius:999px;padding:9px 13px;font-weight:700;white-space:nowrap;font-size:12px}
+.js .rv{opacity:0;transform:translateY(28px) scale(.97);transition:opacity .7s ease,transform .7s cubic-bezier(.3,1.4,.5,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .produit.rv.in:nth-child(odd){transform:rotate(-1deg)}.js .produit.rv.in:nth-child(even){transform:rotate(1deg)}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.defile div{animation:none}}
+@media (min-width:760px){
+  .hero .grille{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .produits{grid-template-columns:repeat(4,1fr)}
+  .pourqui{grid-template-columns:1fr 1fr}
+  .noel .grille{grid-template-columns:1fr 1fr;gap:50px}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .lignes{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="marque" href="#"><img src="img/visuel-kdo-chrono.jpg" alt="Logo Kdo Chrono"><span>Kdo Chrono</span></a>
+    <a class="btn btn-v" href="https://wa.me/33628000203" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero taches">
+  <div class="wrap grille">
+    <div>
+      <span class="badge rv">Personnalisation express · Cucq</span>
+      <h1 class="rv d1">Vos idées deviennent des <em>cadeaux uniques</em></h1>
+      <p class="lead rv d2">Artisan passionné, je transforme vos idées en cadeaux personnalisés, même en dernière minute. Pour les particuliers comme pour les indépendants : chaque création raconte une histoire.</p>
+      <div class="cta rv d3">
+        <a class="btn btn-v" href="tel:+33628000203">06 28 00 02 03</a>
+        <a class="btn btn-b" href="mailto:kdochrono@gmail.com">Demander un devis</a>
+      </div>
+    </div>
+    <div class="visuel rv d2">
+      <img src="img/visuel-kdo-chrono.jpg" alt="Visuel Kdo Chrono, personnalisation express" width="960" height="960">
+      <span class="sticker">Vos idées prennent vie !</span>
+    </div>
+  </div>
+</section>
+
+<div class="defile-box" aria-hidden="true"><div class="defile"><div>
+  <span>T-shirts</span><span>Sweats</span><span>Casquettes</span><span>Bonnets</span><span>Mugs</span><span>Porte-clés</span><span>Stylos</span><span>Tote bags</span>
+  <span>T-shirts</span><span>Sweats</span><span>Casquettes</span><span>Bonnets</span><span>Mugs</span><span>Porte-clés</span><span>Stylos</span><span>Tote bags</span>
+</div></div></div>
+
+<section id="creations">
+  <div class="wrap">
+    <p class="sur rv">Ce que je personnalise</p>
+    <h2 class="rv">Textiles, objets,<br>cadeaux sur mesure</h2>
+    <div class="produits">
+      <div class="produit rv"><div class="ico" style="background:#e7f5ea">👕</div><h3>T-shirts &amp; sweats</h3><p>Textiles personnalisés à votre image.</p></div>
+      <div class="produit rv d1"><div class="ico" style="background:#fff3bf">🧢</div><h3>Casquettes &amp; bonnets</h3><p>Pour l'équipe, l'asso ou pour offrir.</p></div>
+      <div class="produit rv d2"><div class="ico" style="background:#e7f1fc">☕</div><h3>Mugs</h3><p>Le cadeau qui sert tous les matins.</p></div>
+      <div class="produit rv d3"><div class="ico" style="background:#fdecf2">🔑</div><h3>Porte-clés &amp; stylos</h3><p>Objets publicitaires, porte-clés QR code.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap pourqui">
+    <div class="bloc rv" style="background:var(--bleu)"><h3>Particuliers</h3><ul><li>Cadeaux sur mesure</li><li>Idées cadeaux originales</li><li>Même en dernière minute</li></ul></div>
+    <div class="bloc rv d1" style="background:var(--rose)"><h3>Pros &amp; associations</h3><ul><li>Objets publicitaires</li><li>Textiles personnalisés</li><li>Aux couleurs de votre établissement</li></ul></div>
+  </div>
+</section>
+
+<section class="noel">
+  <div class="wrap grille">
+    <img class="rv" src="img/creations-noel.jpg" alt="Créations Kdo Chrono pour Noël : t-shirts, bonnets, casquettes, mug, sweats, tote bag" loading="lazy" width="529" height="485">
+    <div>
+      <p class="sur rv">Noël approche</p>
+      <h2 class="rv">Kdo Chrono se prépare pour les marchés de Noël</h2>
+      <p class="rv">Municipalités, comités des fêtes, associations : Kdo Chrono cherche des emplacements de marchés de Noël dans la région pour y installer son stand de créations personnalisées.</p>
+      <a class="btn btn-v rv" href="mailto:kdochrono@gmail.com">Proposer un emplacement</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="sur rv">Comment ça marche</p>
+    <h2 class="rv">Simple et rapide</h2>
+    <div class="etapes">
+      <div class="etape rv"><div><h3>Votre idée</h3><p>Un texte, un logo, une photo : envoyez-la par WhatsApp ou par e-mail.</p></div></div>
+      <div class="etape rv d1"><div><h3>Votre devis</h3><p>On choisit ensemble le support : textile, mug, porte-clés…</p></div></div>
+      <div class="etape rv d2"><div><h3>Votre création</h3><p>Personnalisée en express, prête à offrir.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact taches" id="contact">
+  <div class="wrap">
+    <p class="sur rv" style="color:#fff3bf">Infos et devis</p>
+    <h2 class="rv">On en parle ?</h2>
+    <div class="lignes">
+      <a class="rv" href="tel:+33628000203"><span style="padding:0;background:none">06 28 00 02 03</span><small>Appel ou WhatsApp</small></a>
+      <a class="rv d1" href="mailto:kdochrono@gmail.com"><span style="padding:0;background:none">kdochrono@gmail.com</span><small>Devis</small></a>
+      <a class="rv d2" href="https://www.facebook.com/kdochrono62" target="_blank" rel="noopener"><span style="padding:0;background:none">@kdochrono62</span><small>Facebook · Cucq</small></a>
+    </div>
+    <div class="rv" style="display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn btn-v" href="https://wa.me/33628000203" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+      <a class="btn btn-b" href="https://www.facebook.com/kdochrono62" target="_blank" rel="noopener">Suivre la page</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Kdo Chrono · Personnalisation express · Cucq (62780)</span>
+    <span>Site réalisé par <a href="https://www.tempoagency.fr" target="_blank" rel="noopener">TEMPO</a></span>
+  </div>
+</footer>
+
+<div class="tempo"><span>Maquette proposée par TEMPO</span><a href="https://www.tempoagency.fr/demo" target="_blank" rel="noopener">Ce site vous plaît ? Parlons-en</a></div>
+
+<script>
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
+</script>
+<script src="../assets/suivi.js" defer></script>
+</body>
+</html>
