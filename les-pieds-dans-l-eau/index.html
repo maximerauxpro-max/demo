@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Les pieds dans l'eau · Resto-bar à Sainte-Cécile</title>
+<meta name="description" content="Les pieds dans l'eau, restaurant français et bar sur l'esplanade de Sainte-Cécile (Camiers). Salle et terrasse, réservation par téléphone au 03 21 84 07 97.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Parisienne&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--marine:#2d313a;--nuit:#1f232b;--creme:#f5efe4;--sable:#ebe2d1;--or:#b08d4e;--olive:#7d7c55;--brun:#5b4632;--texte:#3a3630}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;background:var(--creme);color:var(--texte);line-height:1.65;overflow-x:hidden;padding-bottom:62px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+.script{font-family:Parisienne,cursive;font-weight:400}
+
+/* héros */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--creme);isolation:isolate;overflow:hidden;padding:90px 20px 120px}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:respire 14s ease-in-out infinite alternate}
+@keyframes respire{from{transform:scale(1.02)}to{transform:scale(1.1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 40%,rgba(31,35,43,.45),rgba(31,35,43,.88) 75%)}
+.hero .logo{width:132px;height:132px;margin:0 auto 26px;border-radius:50%;border:3px solid #f5efe4;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.hero .pre{font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:#d9c7a3}
+.hero h1{font-family:Parisienne,cursive;font-weight:400;font-size:clamp(56px,16vw,120px);line-height:1.05;margin:8px 0 6px;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero .rb{font-family:"Cormorant Garamond";font-size:20px;letter-spacing:.3em;text-transform:uppercase}
+.hero .rb::before,.hero .rb::after{content:"";display:inline-block;width:34px;height:1px;background:var(--or);vertical-align:middle;margin:0 14px}
+.hero .lieu{margin-top:22px;font-size:16px;color:#e9e1d1}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:14px 28px;border:1px solid var(--or);border-radius:999px;text-decoration:none;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--creme);background:rgba(176,141,78,.18);transition:background .3s}
+.cta:hover{background:var(--or)}
+.vague{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;color:var(--creme)}
+.vague path{fill:currentColor}
+
+/* intro */
+.intro{padding:70px 0 40px;text-align:center}
+.intro .feuille{width:58px;margin:0 auto 18px;color:var(--olive)}
+.intro p.big{font-family:"Cormorant Garamond";font-size:clamp(25px,6vw,36px);line-height:1.35;color:var(--marine);max-width:760px;margin:0 auto}
+.intro p.big em{color:var(--or)}
+
+/* duo */
+.duo{display:grid;gap:30px;align-items:center;padding:40px 0 70px}
+@media(min-width:840px){.duo{grid-template-columns:1.05fr 1fr;gap:64px}.duo.inv .img{order:2}}
+.img{position:relative}
+.img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:88% 50%;border-radius:220px 220px 6px 6px}
+.img::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--or);border-radius:220px 220px 6px 6px;z-index:-1}
+.eti{font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--or)}
+h2{font-family:"Cormorant Garamond";font-weight:500;font-size:clamp(36px,8.5vw,56px);line-height:1.08;color:var(--marine);margin:10px 0 16px}
+h2 .script{color:var(--or);font-size:1.15em}
+.duo p{font-size:16.5px;max-width:460px}
+
+/* bandeau marine */
+.marine{background:var(--marine);color:var(--creme);padding:80px 0;position:relative;overflow:hidden}
+.marine::before{content:"";position:absolute;inset:auto -10% -60px -10%;height:160px;background:radial-gradient(ellipse at center,rgba(176,141,78,.22),transparent 70%)}
+.marine h2{color:var(--creme);text-align:center}
+.marine .eti{text-align:center;display:block}
+.cartes{display:grid;gap:16px;margin-top:38px}
+@media(min-width:760px){.cartes{grid-template-columns:repeat(3,1fr)}}
+.c{border:1px solid rgba(176,141,78,.45);border-radius:6px;padding:28px 22px;text-align:center;background:rgba(255,255,255,.03)}
+.c svg{width:34px;height:34px;stroke:var(--or);fill:none;stroke-width:1.4;margin:0 auto 12px}
+.c h3{font-family:"Cormorant Garamond";font-weight:600;font-size:25px;line-height:1.2}
+.c p{color:#c9c2b4;font-size:15px;margin-top:6px}
+
+/* assiette */
+.assiette{padding:80px 0;text-align:center}
+.assiette .rond{width:min(420px,84vw);aspect-ratio:1;margin:30px auto 0;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -25px rgba(45,49,58,.55);outline:1px solid var(--or);outline-offset:12px}
+.assiette .rond img{width:100%;height:100%;object-fit:cover;transform:scale(1.35);transform-origin:50% 48%}
+.assiette p{max-width:520px;margin:34px auto 0;font-size:16.5px}
+
+/* contact */
+.contact{background:var(--sable);padding:80px 0;text-align:center}
+.contact .tel{display:block;font-family:"Cormorant Garamond";font-size:clamp(40px,11vw,64px);color:var(--marine);text-decoration:none;margin:8px 0 4px;letter-spacing:.02em}
+.contact .tel:hover{color:var(--or)}
+.ferme{display:inline-block;margin-top:14px;padding:8px 18px;border-radius:999px;background:var(--creme);font-size:14.5px;color:var(--brun)}
+.liens{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.liens a{padding:11px 20px;border-radius:999px;border:1px solid var(--marine);text-decoration:none;font-size:14px;letter-spacing:.08em;transition:background .3s,color .3s}
+.liens a:hover{background:var(--marine);color:var(--creme)}
+footer{background:var(--nuit);color:#9b978d;text-align:center;padding:40px 20px 96px;margin-bottom:-62px;font-size:14px}
+footer img{width:64px;height:64px;border-radius:50%;border:2px solid #f5efe4;margin:0 auto 12px}
+footer a{color:#d9c7a3}
+
+/* révélations */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+.rv.in{opacity:1;transform:none}
+.trait{stroke-dasharray:240;stroke-dashoffset:240;transition:stroke-dashoffset 1.8s ease}
+.in .trait{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.hero>img{animation:none}.trait{stroke-dashoffset:0}}
+
+.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(245,239,228,.95);backdrop-filter:blur(8px);border-top:1px solid #ddd2bd;font-size:12.5px;color:#6d6658}
+.tempo a{flex:0 0 auto;background:var(--marine);color:#fff;text-decoration:none;font-weight:500;padding:8px 12px;border-radius:999px;font-size:12.5px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img src="img/salle.jpg" alt="La salle du restaurant Les pieds dans l'eau" width="1400" height="933">
+  <div>
+    <img class="logo rv" src="img/logo.png" alt="Logo Les pieds dans l'eau" width="400" height="400">
+    <div class="pre rv d1">Sainte-Cécile · Camiers</div>
+    <h1 class="rv d1">Les pieds dans l'eau</h1>
+    <div class="rb rv d2">Resto · Bar</div>
+    <p class="lead lieu rv d2">Restaurant français sur l'esplanade de Sainte-Cécile</p>
+    <a class="cta rv d3" href="tel:+33321840797">Réserver une table</a>
+  </div>
+  <svg class="vague" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c120-28 240-28 360 0s240 28 360 0 240-28 360 0 240 28 360 0v30H0z"/></svg>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <svg class="feuille rv" viewBox="0 0 120 40" aria-hidden="true"><path class="trait" d="M4 20c30-14 60-14 112 0M30 20c6-10 16-14 26-12M66 20c6 10 16 14 26 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <p class="big rv d1">Une table au bord de la plage, une cuisine française <em>à l'assiette</em>, et le bar pour prolonger le moment.</p>
+  </div>
+</section>
+
+<div class="wrap duo">
+  <div class="img rv"><img src="img/mur.jpg" alt="La carte du restaurant Les pieds dans l'eau, Resto - Bar" width="1400" height="1400" loading="lazy"></div>
+  <div>
+    <div class="eti rv">La maison</div>
+    <h2 class="rv d1">Le resto-bar<br><span class="script">de l'esplanade</span></h2>
+    <p class="rv d2">Les pieds dans l'eau, c'est le restaurant de Sainte-Cécile, à Camiers : on s'y installe en salle ou en terrasse, le temps d'un déjeuner, d'un dîner ou d'un verre face à la mer.</p>
+  </div>
+</div>
+
+<section class="marine">
+  <div class="wrap">
+    <span class="eti rv">Infos pratiques</span>
+    <h2 class="rv d1">Venir <span class="script">nous voir</span></h2>
+    <div class="cartes">
+      <div class="c rv"><svg viewBox="0 0 24 24"><path d="M3 11h18M5 11V7a7 7 0 0 1 14 0v4M7 11v9M17 11v9M4 20h16"/></svg><h3>Salle &amp; terrasse</h3><p>Sur place, à l'intérieur ou dehors aux beaux jours.</p></div>
+      <div class="c rv d1"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Jours de fermeture</h3><p>Fermé le mardi soir et le mercredi.</p></div>
+      <div class="c rv d2"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><h3>Réservation</h3><p>Par téléphone au 03 21 84 07 97.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="assiette">
+  <div class="wrap">
+    <div class="eti rv">À l'assiette</div>
+    <h2 class="rv d1">Cuisine <span class="script">française</span></h2>
+    <div class="rond rv d2"><img src="img/plat.jpg" alt="Une assiette du restaurant Les pieds dans l'eau" width="1050" height="1400" loading="lazy"></div>
+    <p class="rv">Le restaurant français de Sainte-Cécile, en salle ou en terrasse, à deux pas du sable.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="eti rv">Réserver</div>
+    <a class="tel rv d1" href="tel:+33321840797">03 21 84 07 97</a>
+    <p class="rv d1">Esplanade de Sainte-Cécile · 62176 Camiers</p>
+    <span class="ferme rv d2">Fermé le mardi soir et le mercredi</span>
+    <div class="liens rv d3">
+      <a href="https://www.google.com/maps/search/?api=1&query=Les%20pieds%20dans%20l%27eau%20Sainte-C%C3%A9cile%20Camiers" target="_blank" rel="noopener">Itinéraire</a>
+      <a href="https://www.facebook.com/Lespiedsdansleau62/" target="_blank" rel="noopener">Facebook</a>
+      <a href="mailto:romain.fauchois62@icloud.com">E-mail</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.png" alt="" width="400" height="400">
+  <p>Les pieds dans l'eau · Resto - Bar · Sainte-Cécile, Camiers</p>
+  <p style="margin-top:8px">Site réalisé par <a href="https://www.tempoagency.fr" target="_blank" rel="noopener">TEMPO</a></p>
+</footer>
+
+<div class="tempo"><span>Maquette proposée par TEMPO</span><a href="https://www.tempoagency.fr/demo" target="_blank" rel="noopener">Ce site vous plaît ? Parlons-en</a></div>
+
+<script>
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e)});})();
+</script>
+<script src="../assets/suivi.js" defer></script>
+</body>
+</html>

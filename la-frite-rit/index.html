@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Frite Rit · Burgers &amp; poutines à Cucq</title>
+<meta name="description" content="La Frite Rit, snack-bar au 41 avenue des Plages à Cucq (Stella-Plage) : burgers servis avec des frites, poutines, sandwichs et américains.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#de2f04;--orange-f:#b52603;--jaune:#f4bf23;--noir:#141210;--ardoise:#1d1a17;--creme:#fff6df}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Archivo,system-ui,sans-serif;background:var(--orange);color:var(--creme);line-height:1.5;overflow-x:hidden;padding-bottom:62px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{width:min(1100px,100% - 36px);margin-inline:auto}
+.lg{font-family:"Luckiest Guy",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95}
+.contour{color:var(--jaune);-webkit-text-stroke:2px var(--noir);paint-order:stroke fill;text-shadow:4px 5px 0 var(--noir)}
+
+/* héros */
+.hero{position:relative;padding:28px 0 70px;overflow:hidden;background:radial-gradient(circle at 50% 38%,#f04a12 0,var(--orange) 55%)}
+.rayons{position:absolute;left:50%;top:38%;width:1600px;height:1600px;margin:-800px 0 0 -800px;background:repeating-conic-gradient(rgba(255,255,255,.07) 0 8deg,transparent 8deg 20deg);animation:tourne 60s linear infinite;pointer-events:none}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.nav{position:relative;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.nav .pill{font-family:"Luckiest Guy";font-size:15px;letter-spacing:.04em;background:var(--noir);color:var(--jaune);padding:9px 14px 7px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.nav .ville{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.12em}
+.hero .logo{position:relative;width:min(360px,80vw);margin:26px auto 0;border-radius:36px;box-shadow:0 0 0 6px var(--noir),0 22px 0 6px rgba(0,0,0,.25);animation:wiggle 3.6s ease-in-out infinite}
+@keyframes wiggle{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg) translateY(-6px)}}
+.hero h1{position:relative;text-align:center;font-size:clamp(34px,9vw,64px);margin-top:34px}
+.hero p.sous{position:relative;text-align:center;font-weight:600;font-size:17px;max-width:520px;margin:14px auto 0}
+.btns{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.btn{font-family:"Luckiest Guy";font-size:19px;letter-spacing:.04em;text-decoration:none;padding:15px 22px 12px;border-radius:14px;border:3px solid var(--noir);box-shadow:5px 5px 0 var(--noir);transition:transform .15s,box-shadow .15s}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--noir)}
+.btn.j{background:var(--jaune);color:var(--noir)}
+.btn.n{background:var(--creme);color:var(--noir)}
+
+/* défilant */
+.bande-w{overflow:hidden;margin:-20px 0 -8px;padding:6px 0;position:relative;z-index:2}
+.bande{background:var(--noir);color:var(--jaune);overflow:hidden;border-block:4px solid var(--jaune);transform:rotate(-2deg);margin:0 -10px;position:relative}
+.bande .piste{display:flex;width:max-content;animation:defile 22s linear infinite}
+.bande span{font-family:"Luckiest Guy";font-size:26px;padding:14px 0 10px;white-space:nowrap}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* carte */
+.carte{background:var(--ardoise);padding:90px 0 70px;position:relative}
+.carte::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/14px 14px;pointer-events:none}
+.titre{font-size:clamp(44px,12vw,82px);text-align:center;position:relative}
+.titre small{display:block;font-family:Archivo;font-weight:800;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--jaune);-webkit-text-stroke:0;text-shadow:none;margin-top:10px}
+.cols{display:grid;gap:22px;margin-top:40px;position:relative}
+@media(min-width:860px){.cols{grid-template-columns:1fr 1fr}}
+.bloc{border:3px solid var(--jaune);border-radius:18px;padding:22px 18px 10px;position:relative;background:rgba(0,0,0,.25)}
+.bloc h3{font-family:"Luckiest Guy";font-weight:400;font-size:32px;color:var(--orange);position:absolute;top:-22px;left:16px;background:var(--ardoise);padding:0 10px;letter-spacing:.02em}
+.bloc .note{font-size:12.5px;text-transform:uppercase;letter-spacing:.14em;color:#cfc6b0;margin:6px 0 10px;font-weight:600}
+.plat{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(244,191,35,.28)}
+.plat:last-child{border-bottom:0}
+.plat b{font-family:"Luckiest Guy";font-weight:400;font-size:20px;letter-spacing:.03em;color:var(--jaune);display:block;line-height:1.1}
+.plat p{font-size:14px;color:#d9d2c0;margin-top:3px}
+.plat .px{font-family:Archivo,sans-serif;font-weight:800;font-size:17px;white-space:nowrap;color:#fff;padding-top:1px}
+.maison{display:inline-block;margin-left:6px;font-family:Archivo;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--creme);color:var(--noir);padding:2px 6px;border-radius:4px;vertical-align:2px}
+.encore{position:relative;text-align:center;margin-top:30px;color:#d9d2c0;font-size:15px}
+.encore b{color:var(--jaune)}
+
+/* poutine */
+.poutine{padding:80px 0;background:var(--jaune);color:var(--noir);overflow:hidden}
+.poutine .duo{display:grid;gap:28px;align-items:center}
+@media(min-width:860px){.poutine .duo{grid-template-columns:1fr 1fr;gap:56px}}
+.poutine .affiche{max-width:94%;margin-inline:auto;border:4px solid var(--noir);border-radius:20px;overflow:hidden;box-shadow:10px 10px 0 var(--noir);transform:rotate(-2.5deg)}
+.poutine h2{font-size:clamp(46px,12vw,80px);color:var(--orange);-webkit-text-stroke:2px var(--noir);paint-order:stroke fill;text-shadow:4px 5px 0 var(--noir)}
+.poutine p{font-size:17px;font-weight:600;margin-top:14px;max-width:460px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags span{background:var(--noir);color:var(--jaune);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+
+/* infos */
+.infos{padding:80px 0 70px}
+.infos .grille{display:grid;gap:16px;margin-top:36px}
+@media(min-width:760px){.infos .grille{grid-template-columns:repeat(3,1fr)}}
+.tuile{background:var(--creme);color:var(--noir);border:3px solid var(--noir);border-radius:18px;padding:22px;box-shadow:6px 6px 0 var(--noir);text-decoration:none;display:block}
+.tuile small{font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--orange)}
+.tuile b{display:block;font-family:"Luckiest Guy";font-weight:400;font-size:25px;letter-spacing:.02em;margin-top:6px;line-height:1.1}
+.tuile p{font-size:14.5px;margin-top:6px;color:#4a4540}
+footer{background:var(--noir);text-align:center;padding:36px 18px 92px;margin-bottom:-62px;font-size:14px;color:#bdb4a2}
+footer img{width:84px;border-radius:16px;margin:0 auto 12px}
+footer a{color:var(--jaune)}
+
+/* révélations */
+.rv{opacity:0;transform:translateY(30px) scale(.97);transition:opacity .7s ease,transform .7s cubic-bezier(.3,1.4,.5,1)}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+.rv.in{opacity:1;transform:none}
+.poutine .affiche.rv.in{transform:rotate(-2.5deg)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.rayons,.hero .logo,.bande .piste{animation:none}}
+
+.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,18,16,.95);backdrop-filter:blur(8px);font-size:12.5px;color:#cfc6b0}
+.tempo a{flex:0 0 auto;background:var(--jaune);color:var(--noir);text-decoration:none;font-weight:800;padding:8px 12px;border-radius:999px;font-size:12.5px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="rayons" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="nav">
+      <span class="ville">Cucq · Stella-Plage</span>
+      <a class="pill" href="tel:+33321943542">03 21 94 35 42</a>
+    </div>
+    <img class="logo" src="img/logo.jpg" alt="Logo La Frite Rit, burgers et poutines" width="700" height="700">
+    <h1 class="lg contour rv">Burgers &amp; poutines</h1>
+    <p class="sous rv d1">Le snack-bar du 41 avenue des Plages, à Cucq, à quelques kilomètres du Touquet. Fait maison avec des produits de qualité.</p>
+    <div class="btns rv d2">
+      <a class="btn j" href="#carte">Voir la carte</a>
+      <a class="btn n" href="tel:+33321943542">Appeler</a>
+    </div>
+  </div>
+</section>
+
+<div class="bande-w"><div class="bande" aria-hidden="true"><div class="piste">
+  <span>&nbsp;Burgers ★ Poutines ★ Frites ★ Américains ★ Sauce faite maison ★ Menu P'tit Loup ★&nbsp;</span>
+  <span>&nbsp;Burgers ★ Poutines ★ Frites ★ Américains ★ Sauce faite maison ★ Menu P'tit Loup ★&nbsp;</span>
+</div></div></div>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <h2 class="titre lg contour rv">La carte<small>La nouvelle carte est arrivée</small></h2>
+    <div class="cols">
+      <div class="bloc rv">
+        <h3>Les burgers</h3>
+        <div class="note">Servis avec des frites</div>
+        <div class="plat"><div><b>Ch'ti Burger<span class="maison">Sauce maison</span></b><p>Pain brioché, sauce burger, cornichons, confit d'oignons rouges, salade, tomates, maroilles</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Cheese Burger<span class="maison">Sauce maison</span></b><p>Pain brioché, sauce burger, confit d'oignons rouges, salade, tomates, cheddar, cornichons</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Chèvre Miel<span class="maison">Sauce maison</span></b><p>Pain brioché, sauce burger, confit d'oignons rouges, salade, tomates, chèvre miel, bacon, cornichons</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Crispy Burger<span class="maison">Sauce maison</span></b><p>Pain brioché, sauce burger, cornichons, salade, tomates, oignons confits, poulet croustillant</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Double Steak Burger</b><p>Double steak, pain brioché, sauce burger, cornichons, oignons rouges, confit, galette de pomme de terre, salade, tomates</p></div><span class="px">13,00 €</span></div>
+        <div class="plat"><div><b>Savoyard Burger<span class="maison">Sauce maison</span></b><p>Pain brioché, sauce burger, cornichons, salade, tomates, confit d'oignons rouges, reblochon</p></div><span class="px">14,00 €</span></div>
+      </div>
+      <div class="bloc rv d1">
+        <h3>Les poutines</h3>
+        <div class="note">Frites, sauce et garnitures</div>
+        <div class="plat"><div><b>Montréal</b><p>Frites, sauce brune, bacon, cheddar, steak haché</p></div><span class="px">9,00 €</span></div>
+        <div class="plat"><div><b>Toronto</b><p>Frites, sauce brune, bacon, steak haché, merguez</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Vancouver</b><p>Frites, oignons frits, bacon, champignons, cheddar, effiloché de volaille</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Calgary</b><p>Frites, oignons frits, bacon, cheddar, steak haché, tenders de poulet</p></div><span class="px">11,00 €</span></div>
+        <div class="plat"><div><b>Trappeur</b><p>Frites, chorizo, merguez, crème cheddar, bacon, oignons frits, cheddar</p></div><span class="px">12,00 €</span></div>
+        <div class="plat"><div><b>Québec</b><p>Frites, fish and chips, crème maroilles, bacon, oignons frits</p></div><span class="px">13,00 €</span></div>
+      </div>
+    </div>
+    <p class="encore rv">Et aussi : <b>Ottawa, Edmonton</b>, les sandwichs et américains, les frites petite ou grande, le <b>menu P'tit Loup</b> pour les enfants.</p>
+  </div>
+</section>
+
+<section class="poutine">
+  <div class="wrap duo">
+    <div class="affiche rv"><img src="img/poutine.jpg" alt="Affiche Poutine façon La Frite Rit : Poutine du Trappeur et Poutine Québec" width="989" height="1400" loading="lazy"></div>
+    <div>
+      <h2 class="lg rv">Poutine façon La Frite Rit !</h2>
+      <p class="rv d1">Des saveurs généreuses et authentiques. La Poutine du Trappeur (chorizo, merguez, crème cheddar) et la Poutine Québec (fish and chips, crème maroilles) : à découvrir dès maintenant.</p>
+      <div class="tags rv d2"><span>Fait maison</span><span>Produits de qualité</span><span>Pur bonheur à partager</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="infos">
+  <div class="wrap">
+    <h2 class="titre lg contour rv">On vous attend !</h2>
+    <div class="grille">
+      <a class="tuile rv" href="https://www.google.com/maps/search/?api=1&query=La%20Frite%20Rit%2041%20avenue%20des%20Plages%20Cucq" target="_blank" rel="noopener"><small>Adresse</small><b>41 avenue des Plages</b><p>62780 Cucq · Stella-Plage</p></a>
+      <a class="tuile rv d1" href="tel:+33321943542"><small>Téléphone</small><b>03 21 94 35 42</b><p>Appelez-nous.</p></a>
+      <a class="tuile rv d2" href="https://www.facebook.com/restaurantacotecucq" target="_blank" rel="noopener"><small>Facebook</small><b>La frite rit</b><p>La carte, les nouveautés, les soirs de match.</p></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.jpg" alt="" width="700" height="700">
+  <p>La Frite Rit · 41 avenue des Plages, 62780 Cucq</p>
+  <p style="margin-top:8px">Site réalisé par <a href="https://www.tempoagency.fr" target="_blank" rel="noopener">TEMPO</a></p>
+</footer>
+
+<div class="tempo"><span>Maquette proposée par TEMPO</span><a href="https://www.tempoagency.fr/demo" target="_blank" rel="noopener">Ce site vous plaît ? Parlons-en</a></div>
+
+<script>
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e)});})();
+</script>
+<script src="../assets/suivi.js" defer></script>
+</body>
+</html>
