@@ -1,0 +1,143 @@
+/* Les Terrasses du Green : maquette TEMPO (24/11/2026). Direction « brasserie de nuit » : briques, néon rouge, vert sauge du logo. */
+:root{
+  --nuit:#121513; --nuit2:#1b201d; --sauge:#8daa84; --sauge-f:#2e4636; --neon:#ff4646; --creme:#f4efe4; --texte:#e9e5da;
+  --serif:"Fraunces",Georgia,serif; --sans:"Poppins",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--nuit);color:var(--texte);font:400 16px/1.6 var(--sans);overflow-x:hidden;padding-bottom:64px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 18px}
+
+/* En-tête */
+header{position:sticky;top:0;z-index:20;background:rgba(18,21,19,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(141,170,132,.18)}
+.barre{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.marque img{width:40px;height:40px;border-radius:50%;background:#fff;flex:none}
+.marque span{font:600 17px/1.1 var(--serif);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.marque small{display:block;font:500 10px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--sauge)}
+.menu{display:flex;gap:6px;overflow-x:auto;padding:0 0 10px;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{flex:none;text-decoration:none;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid rgba(233,229,218,.16);color:#d8d4c8}
+.menu a[aria-current]{background:var(--sauge);border-color:var(--sauge);color:var(--nuit);font-weight:600}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:600 15px/1 var(--sans);padding:14px 20px;border-radius:999px;transition:transform .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn-neon{background:var(--neon);color:#fff;box-shadow:0 0 0 1px rgba(255,70,70,.4),0 0 22px rgba(255,70,70,.45)}
+.btn-ligne{border:1.5px solid var(--creme);color:var(--creme)}
+.btn-petit{padding:10px 14px;font-size:14px}
+
+/* Héros */
+.heros{position:relative;min-height:80svh;display:flex;align-items:flex-end;overflow:hidden}
+.heros>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:36% 50%;transform:scale(1.06);animation:respire 14s ease-in-out infinite alternate}
+@keyframes respire{to{transform:scale(1)}}
+.heros::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,21,19,.15) 0%,rgba(18,21,19,.35) 38%,rgba(18,21,19,.94) 78%,var(--nuit) 100%)}
+.heros .wrap{position:relative;z-index:2;padding-bottom:34px}
+.sur{font:500 12px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--sauge)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;color:var(--creme)}
+h1{font-size:clamp(44px,13vw,96px);letter-spacing:-.02em;margin:10px 0 12px}
+h1 em,h2 em{font-style:italic;font-weight:400;color:var(--neon);text-shadow:0 0 18px rgba(255,70,70,.55)}
+.heros p.chapo{max-width:34ch;font-size:17px;color:#ddd8cc}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.credit{position:absolute;right:10px;top:10px;z-index:3;font-size:11px;color:rgba(255,255,255,.75);background:rgba(0,0,0,.35);padding:3px 8px;border-radius:99px}
+
+/* Bande défilante (animation autonome, n'intercepte pas le défilement) */
+.bande{border-block:1px solid rgba(141,170,132,.25);background:var(--sauge-f);overflow:hidden;white-space:nowrap}
+.bande div{display:inline-flex;animation:defile 28s linear infinite}
+.bande span{font:italic 400 20px/1 var(--serif);padding:14px 22px;color:var(--creme)}
+.bande span::after{content:"✦";font-style:normal;color:var(--sauge);margin-left:44px;font-size:13px}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:64px 0}
+.kick{font:600 12px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sauge);margin-bottom:10px}
+h2{font-size:clamp(32px,9vw,56px);margin-bottom:16px}
+p+p{margin-top:12px}
+.doux{color:#bdb9ae}
+
+/* Teaser carte */
+.ardoise{margin-top:24px;display:grid;gap:12px}
+.plat{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:16px 18px;border-radius:16px;background:var(--nuit2);border:1px solid rgba(233,229,218,.08)}
+.plat b{font:600 17px/1.3 var(--serif);color:var(--creme)}
+.plat small{display:block;font-size:13px;color:#9fa397;margin-top:3px}
+.plat span{font:600 16px/1 var(--sans);color:var(--sauge);white-space:nowrap}
+
+/* Mosaïque photos */
+.mosaique{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.mosaique figure{position:relative;border-radius:18px;overflow:hidden}
+.mosaique figure:first-child{grid-column:1/-1;aspect-ratio:4/3}
+.mosaique figure{aspect-ratio:3/4}
+.mosaique img{width:100%;height:100%;object-fit:cover}
+.mosaique figcaption{position:absolute;left:10px;bottom:10px;font-size:12px;background:rgba(18,21,19,.72);padding:4px 10px;border-radius:99px}
+
+/* Terrasses */
+.terrasses{background:var(--creme);color:#2a2e2b}
+.terrasses h2{color:var(--sauge-f)}
+.terrasses .kick{color:#5f7f57}
+.duo{display:grid;gap:22px}
+.duo .photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.duo .photo img{width:100%;height:100%;object-fit:cover}
+.pastilles{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pastilles span{font-size:13px;font-weight:500;padding:7px 13px;border-radius:99px;background:#e3ddcd;color:#2e4636}
+
+/* Vente à emporter */
+.emporter{position:relative}
+.emporter .boite{border-radius:24px;padding:26px 20px;background:linear-gradient(160deg,#233629,#162019);border:1px solid rgba(141,170,132,.3)}
+.formules{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.formules div{background:rgba(0,0,0,.25);border-radius:14px;padding:14px}
+.formules b{display:block;font:600 26px/1 var(--serif);color:var(--creme)}
+.formules small{font-size:13px;color:#b9c3b2}
+.heures{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.heures span{font-size:13px;border:1px solid rgba(255,70,70,.5);color:#ffb3b3;padding:6px 12px;border-radius:99px}
+
+/* Infos */
+.infos{display:grid;gap:12px;margin-top:22px}
+.info{padding:18px;border-radius:16px;background:var(--nuit2);border:1px solid rgba(233,229,218,.08)}
+.info b{display:block;font:600 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sauge);margin-bottom:6px}
+.info a{color:var(--creme);font-weight:600}
+
+/* Page carte */
+.tete{padding:46px 0 18px}
+.tete h1{font-size:clamp(40px,12vw,84px)}
+.ancres{position:sticky;top:62px;z-index:10;background:rgba(18,21,19,.95);border-bottom:1px solid rgba(141,170,132,.15)}
+.ancres .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+.ancres .wrap::-webkit-scrollbar{display:none}
+.ancres a{flex:none;font-size:13px;text-decoration:none;padding:6px 12px;border-radius:99px;background:var(--nuit2);color:#d8d4c8}
+.rubrique{padding:40px 0 10px;scroll-margin-top:120px}
+.rubrique h2{font-size:clamp(30px,8vw,46px);display:flex;align-items:center;gap:12px}
+.rubrique h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(141,170,132,.6),transparent)}
+.lignes{list-style:none;margin-top:8px}
+.lignes li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 0;border-bottom:1px dashed rgba(233,229,218,.14)}
+.lignes .n{font-weight:500;color:var(--creme)}
+.lignes .p{font-weight:600;color:var(--sauge);white-space:nowrap}
+.lignes small{grid-column:1/-1;font-size:13px;color:#9fa397}
+.fm{display:inline-block;width:16px;height:16px;vertical-align:-2px;margin-left:6px;color:var(--sauge)}
+.note{margin-top:14px;font-size:13px;color:#a7aa9f;padding:12px 14px;border-left:3px solid var(--sauge);background:rgba(141,170,132,.07);border-radius:0 10px 10px 0}
+.legende{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:13px;color:#c9c5ba}
+
+/* Pied de page + bandeau TEMPO */
+footer{padding:34px 0 30px;border-top:1px solid rgba(233,229,218,.1);font-size:13px;color:#9fa397}
+footer .wrap{display:flex;flex-direction:column;gap:8px}
+footer a{color:var(--creme)}
+.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:#f4efe4;color:#1b201d;font-size:12.5px;box-shadow:0 -6px 24px rgba(0,0,0,.35)}
+.tempo a{flex:none;background:#1b201d;color:#f4efe4;text-decoration:none;font-weight:600;padding:9px 12px;border-radius:99px;font-size:12.5px}
+
+/* Apparition au défilement */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.bande div,.heros>img{animation:none}}
+
+@media (min-width:760px){
+  .barre{height:70px}
+  .menu{padding-bottom:12px}
+  .duo{grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+  .ardoise{grid-template-columns:1fr 1fr}
+  .mosaique{grid-template-columns:2fr 1fr 1fr}
+  .mosaique figure:first-child{grid-column:auto;aspect-ratio:auto}
+  .infos{grid-template-columns:repeat(3,1fr)}
+  .emporter .boite{padding:40px}
+  .formules{grid-template-columns:repeat(4,1fr)}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+  .tempo{justify-content:center;gap:18px;font-size:13.5px}
+}

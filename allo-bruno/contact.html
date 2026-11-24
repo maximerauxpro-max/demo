@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Contact et dépannage · Allo Bruno, électricien à Merlimont</title>
+<meta name="description" content="Contacter Allo Bruno, électricien à Merlimont : 06 87 49 39 64, 03 21 84 35 87, sailly.bruno@wanadoo.fr.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="eclair" viewBox="0 0 24 24"><path fill="#ffd25e" d="M13 2 4 14h6l-1 8 9-12h-6z"/></symbol>
+  <symbol id="tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+</svg>
+<header>
+  <div class="wrap">
+    <div class="barre">
+      <a class="logo" href="index.html"><i><svg><use href="#eclair"/></svg></i><span><b>Allo Bruno</b><small>Électricité · Merlimont</small></span></a>
+      <a class="btn btn-jaune btn-petit" href="tel:+33687493964"><svg><use href="#tel"/></svg>Appeler</a>
+    </div>
+    <nav class="menu" aria-label="Menu"><a href="index.html">Accueil</a><a href="prestations.html">Prestations</a><a href="contact.html" aria-current="page">Contact</a></nav>
+  </div>
+</header>
+
+<div class="tete">
+  <div class="wrap">
+    <p class="kick rv">Contact &amp; dépannage</p>
+    <h1 class="rv d1">Allo&nbsp;? <span style="color:var(--saumon)">Bruno</span></h1>
+    <p class="doux rv d1" style="max-width:38ch">Une panne, un projet, une question&nbsp;: appelez Bruno ou décrivez votre besoin ci-dessous.</p>
+  </div>
+</div>
+
+<section style="padding-top:16px">
+  <div class="wrap deux">
+    <div>
+      <div class="appels" style="margin-top:0">
+        <a class="appel rv" href="tel:+33687493964"><i><svg><use href="#tel"/></svg></i><span><small>Portable</small><b>06 87 49 39 64</b></span></a>
+        <a class="appel rv d1" href="tel:+33321843587"><i><svg><use href="#tel"/></svg></i><span><small>Fixe</small><b>03 21 84 35 87</b></span></a>
+        <a class="appel mail rv" href="mailto:sailly.bruno@wanadoo.fr"><i><svg viewBox="0 0 24 24"><path fill="none" stroke="#1f2d3a" stroke-width="2" d="M3 6h18v12H3z"/><path fill="none" stroke="#1f2d3a" stroke-width="2" d="m3 7 9 6 9-6"/></svg></i><span><small>E-mail</small><b>sailly.bruno@wanadoo.fr</b></span></a>
+        <div class="appel rv d1" style="box-shadow:none"><i style="background:var(--ciel)"><svg viewBox="0 0 24 24"><path fill="none" stroke="#1f2d3a" stroke-width="2" d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5" fill="#1f2d3a"/></svg></i><span><small>Adresse</small><b style="font-size:16px">668 rue Auguste Biblocq<br>62155 Merlimont</b></span></div>
+      </div>
+    </div>
+    <form id="demande" class="rv" style="margin-top:22px" novalidate>
+      <h2 style="font-size:30px;margin-bottom:4px">Votre demande</h2>
+      <p class="doux" style="font-size:14px">Le message s'ouvre dans votre messagerie, prêt à envoyer à Bruno.</p>
+      <label>Votre nom<input name="nom" autocomplete="name" required></label>
+      <label>Votre téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+      <label>Votre commune<input name="ville" autocomplete="address-level2"></label>
+      <label>Type de demande<select name="type"><option>Électricité générale</option><option>Rénovation</option><option>Panne ou dépannage</option><option>Autre travail</option></select></label>
+      <label>Votre message<textarea name="msg" placeholder="Décrivez votre besoin en quelques mots"></textarea></label>
+      <button class="btn btn-jaune" type="submit">Préparer mon message</button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById('demande').addEventListener('submit',function(e){e.preventDefault();var f=e.target;
+var corps='Bonjour Bruno,%0D%0A%0D%0A'+encodeURIComponent(f.msg.value||'')+'%0D%0A%0D%0A'+encodeURIComponent((f.nom.value||'')+' - '+(f.tel.value||'')+' - '+(f.ville.value||''));
+location.href='mailto:sailly.bruno@wanadoo.fr?subject='+encodeURIComponent('Demande : '+f.type.value)+'&body='+corps;});
+</script>
+
+<footer>
+  <div class="wrap">
+    <span>Allo Bruno · Bruno Sailly, électricité générale et rénovation · 668 rue Auguste Biblocq, 62155 Merlimont</span>
+    <span>Site réalisé par <a href="https://www.tempoagency.fr" target="_blank" rel="noopener">TEMPO</a></span>
+  </div>
+</footer>
+
+<div class="tempo"><span>Maquette proposée par TEMPO</span><a href="https://www.tempoagency.fr/demo" target="_blank" rel="noopener">Ce site vous plaît ? Parlons-en</a></div>
+
+<script>
+(function(){var els=document.querySelectorAll('.rv');var rue=document.querySelector('.rue');setTimeout(function(){rue&&rue.classList.add('allume')},700);
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
+</script>
+<script src="../assets/suivi.js" defer></script>
+</body>
+</html>

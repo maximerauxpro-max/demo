@@ -1,0 +1,129 @@
+/* Allo Bruno : maquette TEMPO (24/11/2026). Direction « rue de maisons » : crème, couleurs pastel de la carte de visite, lumière qui s'allume. */
+:root{
+  --creme:#faf6ee; --encre:#1f2d3a; --encre2:#3d4c5a; --sauge:#9db89b; --sauge-f:#4f7353; --saumon:#e7826a; --ciel:#a9cde2; --sable:#f1dcae; --jaune:#ffd25e;
+  --f:"Bricolage Grotesque",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--creme);color:var(--encre);font:400 16.5px/1.6 var(--f);overflow-x:hidden;padding-bottom:64px}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 18px}
+
+header{position:sticky;top:0;z-index:20;background:rgba(250,246,238,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(31,45,58,.08)}
+.barre{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{width:38px;height:38px;border-radius:12px;background:var(--encre);display:grid;place-items:center}
+.logo i svg{width:20px;height:20px}
+.logo b{font-weight:800;font-size:20px;letter-spacing:-.02em;text-transform:uppercase}
+.logo small{display:block;font-weight:500;font-size:11px;letter-spacing:.06em;color:var(--encre2);text-transform:none}
+.menu{display:flex;gap:6px;padding-bottom:10px;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{flex:none;text-decoration:none;font-weight:600;font-size:14px;padding:7px 14px;border-radius:12px;color:var(--encre2)}
+.menu a[aria-current]{background:var(--encre);color:var(--creme)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:700 16px/1 var(--f);padding:15px 20px;border-radius:14px;border:0;cursor:pointer;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px}
+.btn-jaune{background:var(--jaune);color:var(--encre);box-shadow:0 6px 0 #d9a92c}
+.btn-encre{background:var(--encre);color:var(--creme)}
+.btn-ligne{border:2px solid var(--encre);color:var(--encre);background:transparent}
+.btn-petit{padding:10px 14px;font-size:14px;box-shadow:0 4px 0 #d9a92c}
+
+/* Héros */
+.heros{position:relative;padding:34px 0 0;background:linear-gradient(180deg,#dcebf3 0%,#eef4ef 55%,var(--creme) 100%);overflow:hidden}
+.sur{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13px;background:#fff;padding:7px 12px;border-radius:99px;box-shadow:0 2px 10px rgba(31,45,58,.08)}
+.sur i{width:8px;height:8px;border-radius:50%;background:var(--sauge-f)}
+h1,h2,h3{font-weight:800;letter-spacing:-.03em;line-height:1}
+h1{font-size:clamp(56px,18vw,128px);margin:16px 0 10px;text-transform:uppercase}
+h1 span{color:var(--saumon)}
+.chapo{font-size:18px;max-width:30ch;color:var(--encre2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.rue{margin-top:30px;width:100%;height:auto}
+.rue .fen{fill:#3d4c5a;transition:fill .5s}
+.rue.allume .fen{fill:var(--jaune);filter:drop-shadow(0 0 6px rgba(255,210,94,.9))}
+.rue .fen:nth-of-type(3n){transition-delay:.25s}.rue .fen:nth-of-type(3n+1){transition-delay:.5s}.rue .fen:nth-of-type(4n){transition-delay:.8s}
+.sol{height:22px;background:var(--sauge)}
+
+section{padding:62px 0}
+.kick{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--saumon);margin-bottom:10px}
+h2{font-size:clamp(34px,10vw,60px);margin-bottom:16px}
+p+p{margin-top:12px}
+.doux{color:var(--encre2)}
+
+/* Cartes métiers */
+.metiers{display:grid;gap:14px;margin-top:24px}
+.metier{position:relative;padding:24px 20px 22px;border-radius:22px;background:#fff;border:2px solid var(--encre);box-shadow:6px 6px 0 var(--encre)}
+.metier .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:14px}
+.metier .ico svg{width:28px;height:28px}
+.metier h3{font-size:24px;margin-bottom:8px}
+.m1 .ico{background:var(--sable)}.m2 .ico{background:var(--ciel)}.m3 .ico{background:#f6c9bc}
+
+/* Bandeau artisan */
+.artisan{background:var(--encre);color:var(--creme)}
+.artisan h2{color:#fff}
+.artisan .kick{color:var(--jaune)}
+.chiffres{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.chiffres div{background:rgba(255,255,255,.07);border-radius:16px;padding:16px}
+.chiffres b{display:block;font-size:30px;font-weight:800;color:var(--jaune);line-height:1.1}
+.chiffres small{font-size:13px;color:#c7d0d8}
+
+/* Étapes */
+.etapes{display:grid;gap:12px;margin-top:22px;counter-reset:e}
+.etape{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:18px;background:#fff}
+.etape::before{counter-increment:e;content:counter(e);flex:none;width:38px;height:38px;border-radius:50%;background:var(--sauge);color:#fff;font-weight:800;display:grid;place-items:center}
+.etape b{display:block;font-size:18px}
+
+.acomp{margin-top:26px;padding:16px 18px;border-radius:16px;border:2px dashed var(--saumon);background:#fff6f2;font-size:14.5px}
+.acomp b{color:var(--saumon)}
+
+/* Photo d'illustration */
+.illus-wrap{position:relative;border-radius:24px;overflow:hidden;border:2px solid var(--encre)}
+.illus-wrap img{width:100%;height:100%;object-fit:cover}
+.illus{position:absolute;right:10px;bottom:10px;font-size:11.5px;font-weight:600;background:rgba(250,246,238,.9);padding:4px 10px;border-radius:99px}
+
+/* Prestations */
+.tete{padding:40px 0 10px}
+.tete h1{font-size:clamp(46px,14vw,96px)}
+.presta{display:grid;gap:16px;padding:26px 0;border-top:2px solid var(--encre)}
+.presta .num{font-weight:800;font-size:15px;color:var(--saumon)}
+.presta h2{font-size:clamp(30px,8.5vw,48px);margin:4px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:10px;background:#fff;border:1.5px solid rgba(31,45,58,.15)}
+.chips span.vide{border-style:dashed;border-color:var(--saumon);color:var(--saumon);background:transparent}
+
+/* Contact */
+.appels{display:grid;gap:12px;margin-top:20px}
+.appel{display:flex;align-items:center;gap:14px;padding:18px;border-radius:20px;background:#fff;border:2px solid var(--encre);text-decoration:none;box-shadow:5px 5px 0 var(--encre)}
+.appel i{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--jaune)}
+.appel i svg{width:24px;height:24px}
+.appel small{display:block;font-size:13px;color:var(--encre2)}
+.appel b{font-size:21px;letter-spacing:-.01em}
+.appel.mail b{font-size:16px;word-break:break-all}
+form{display:grid;gap:12px;margin-top:20px;padding:22px 18px;border-radius:22px;background:#fff}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:500 16px/1.4 var(--f);padding:13px 14px;border-radius:12px;border:1.5px solid rgba(31,45,58,.25);background:var(--creme);color:var(--encre);width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--ciel);border-color:var(--encre)}
+
+footer{padding:32px 0 28px;border-top:1px solid rgba(31,45,58,.12);font-size:13.5px;color:var(--encre2)}
+footer .wrap{display:flex;flex-direction:column;gap:8px}
+.tempo{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:var(--encre);color:var(--creme);font-size:12.5px;box-shadow:0 -6px 24px rgba(0,0,0,.18)}
+.tempo a{flex:none;background:var(--jaune);color:var(--encre);text-decoration:none;font-weight:700;padding:9px 12px;border-radius:10px;font-size:12.5px}
+
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.rue .fen{transition:none}}
+
+@media (min-width:760px){
+  .barre{height:70px}
+  .metiers{grid-template-columns:repeat(3,1fr)}
+  .chiffres{grid-template-columns:repeat(4,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .presta{grid-template-columns:1fr 1.3fr;gap:40px}
+  .deux{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .appels{grid-template-columns:1fr 1fr}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+  .tempo{justify-content:center;gap:18px;font-size:13.5px}
+}
