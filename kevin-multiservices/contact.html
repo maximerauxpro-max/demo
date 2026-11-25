@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Contact · Kévin Multiservices</title>
+<meta name="description" content="Contactez Kévin Multiservices à Montreuil-sur-Mer : 06 67 11 51 44.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="index.html" aria-label="Kévin Multiservices, accueil"><span class="m">K</span><span class="n">Kévin Multiservices<small>Montreuil-sur-Mer · 20 km</small></span></a>
+    <nav aria-label="Menu principal"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a></nav>
+    <a class="appel" href="tel:+33667115144"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 67 11 51 44</a>
+  </div>
+  <div class="sous-menu"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a></div>
+</header>
+<section style="padding-top:48px">
+  <div class="wrap">
+    <div class="kick rv">Contact</div>
+    <h2 class="rv d1">Un coup de main ? <em>Demandez</em></h2>
+    <p class="intro rv d2">Dites ce dont vous avez besoin, Kévin vous rappelle.</p>
+    <div class="infos"><a class="info rv" href="tel:+33667115144"><small><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Téléphone</small><b>06 67 11 51 44</b></a><a class="info rv d1" href="mailto:bocquetkevin@orange.fr"><small><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>E-mail</small><b>bocquetkevin@orange.fr</b></a><div class="info rv d2"><small>Secteur</small><b>Montreuil-sur-Mer, dans un rayon de 20 km</b></div></div>
+    <form class="devis rv" onsubmit="event.preventDefault();this.querySelector('.note-demo').textContent='Maquette : le formulaire sera relié à votre boîte mail sur le vrai site.'">
+      <label>Votre nom<input name="nom" autocomplete="name" required></label>
+      <label>Téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+      <label>Votre demande<select name="objet"><option>Jardin</option><option>Ménage</option><option>Petit bricolage</option><option>Terrasse</option><option>Informatique</option><option>Aide administrative</option><option>Vide-maison</option><option>Autre</option></select></label>
+      <label>Quelques mots sur votre besoin<textarea name="message"></textarea></label>
+      <button class="btn f" type="submit">Envoyer ma demande</button>
+      <p class="note-demo">Réponse rapide, par téléphone ou par e-mail.</p>
+    </form>
+  </div>
+</section>
+<footer class="pied">
+  <div class="wrap">
+    <a class="marque" href="index.html"><span class="m">K</span><span class="n">Kévin Multiservices<small>Montreuil-sur-Mer · 20 km</small></span></a>
+    <p>Kévin Bocquet · Kévin Multiservices · Montreuil-sur-Mer et 20 km autour</p>
+    <p>Site réalisé par <a href="https://www.tempoagency.fr" target="_blank" rel="noopener">TEMPO</a></p>
+  </div>
+</footer>
+<div class="tempo"><span>Maquette proposée par TEMPO</span><a href="https://www.tempoagency.fr/demo" target="_blank" rel="noopener">Ce site vous plaît ? Parlons-en</a></div>
+<script>
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+els.forEach(function(e){io.observe(e)});
+setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})},900);})();
+</script>
+<script src="../assets/suivi.js" defer></script>
+</body>
+</html>
